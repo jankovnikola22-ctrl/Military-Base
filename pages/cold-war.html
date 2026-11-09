@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cold War article page.">
+  <meta name="theme-color" content="#111411">
+  <title>Cold War | MILITARY BASE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .section-hero--cold-war {
+      background-image: url("../photos/home-page-photos/cold-war.png");
+      background-position: center 45%;
+    }
+
+    .war-article { padding-block: 42px 100px; }
+    .war-breadcrumbs {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 32px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .war-breadcrumbs a { color: var(--olive-bright); }
+    .war-article-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 260px;
+      align-items: start;
+      gap: 26px;
+    }
+    .war-article-content { display: grid; gap: 20px; }
+    .war-article-section,
+    .war-article-nav {
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, rgba(32, 37, 31, 0.86), rgba(25, 29, 25, 0.94));
+    }
+    .war-article-section {
+      padding: clamp(22px, 3.2vw, 36px);
+      border-left: 2px solid rgba(195, 195, 148, 0.55);
+      scroll-margin-top: 100px;
+    }
+    .war-article-section h2,
+    .war-article-nav h3 {
+      margin: 0;
+      font-family: var(--heading-font);
+      font-size: 27px;
+      font-weight: 600;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+    .war-article-section h2 {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+      font-size: clamp(25px, 3vw, 32px);
+    }
+    .war-article-section h2 span {
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+    }
+    .war-writing-area {
+      min-height: 200px;
+      margin-top: 20px;
+      color: #d3d4ca;
+      font-size: 15px;
+      line-height: 1.85;
+      white-space: pre-line;
+    }
+    .war-writing-area.is-formatted { white-space: normal; }
+    .war-writing-area p { max-width: 76ch; margin: 0 0 1.15em; }
+    .war-writing-area p:last-child,
+    .war-writing-area ul:last-child { margin-bottom: 0; }
+    .war-writing-area h4 {
+      margin: 1.8em 0 0.55em;
+      color: var(--olive-bright);
+      font-family: var(--heading-font);
+      font-size: 23px;
+      font-weight: 600;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+    .war-writing-area h4:first-child { margin-top: 0; }
+    .war-writing-area h5 {
+      margin: 1.35em 0 0.4em;
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .war-writing-area ul {
+      display: grid;
+      gap: 9px;
+      max-width: 76ch;
+      margin: 0 0 1.2em;
+      padding-left: 22px;
+    }
+    .war-writing-area li { padding-left: 3px; }
+    .war-writing-area li::marker { color: var(--gold); }
+    .war-writing-area strong { color: var(--white); font-weight: 700; }
+    .war-article-nav {
+      position: sticky;
+      top: 100px;
+      padding: 22px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+    .war-article-nav h3 {
+      margin-bottom: 15px;
+      color: var(--olive-bright);
+      font-size: 21px;
+    }
+    .war-article-nav ol {
+      display: grid;
+      gap: 4px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .war-article-nav a {
+      display: block;
+      padding: 10px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      transition: color 180ms ease;
+    }
+    .war-article-nav a:hover,
+    .war-article-nav a:focus-visible { color: var(--olive-bright); }
+    @media (max-width: 760px) {
+      .war-article { padding-block: 42px 72px; }
+      .war-article-layout { grid-template-columns: 1fr; }
+      .war-article-nav { position: static; grid-row: 1; }
+      .war-article-section { padding: 22px 18px; }
+      .war-writing-area { font-size: 14px; line-height: 1.8; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html" aria-label="Military Base home">
+        <span class="logo-placeholder" aria-hidden="true"></span>
+        <span class="brand-name">MILITARY <span>BASE</span></span>
+      </a>
+      <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation">
+      <label class="menu-button" for="menu-toggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-home" href="../index.html">Home</a>
+        <a href="world-militaries.html">World Militaries</a>
+        <a href="military-units.html">Military Units</a>
+        <a href="military-ranks.html">Military Ranks</a>
+        <a href="weapons.html">Weapons</a>
+        <a href="military-aviation.html">Military Aviation</a>
+        <a href="land-systems.html">Land Systems</a>
+        <a href="naval-forces.html">Naval Forces</a>
+        <a href="hunting.html">Hunting</a>
+        <a href="military-history.html">Military History</a>
+      </nav>
+      <a class="header-search" href="military-history.html" aria-label="Back to Military History">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="10.8" cy="10.8" r="6.8"></circle>
+          <path d="m16 16 5 5"></path>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section-hero section-hero--cold-war">
+      <div class="page-width section-hero-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> MILITARY HISTORY</p>
+        <h1>COLD <span>WAR</span></h1>
+        <a class="text-link" href="military-history.html">← Back to Military History</a>
+      </div>
+    </section>
+
+    <article class="war-article page-width">
+      <nav class="war-breadcrumbs" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="military-history.html">Military History</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Cold War</span>
+      </nav>
+
+      <div class="war-article-layout">
+        <div class="war-article-content">
+          <section class="war-article-section" id="overview">
+            <h2><span>01</span> Origins of the Cold War &amp; Major Crises</h2>
+            <div class="war-writing-area"># Origins of the Cold War & Major Crises (1947–1962)
+
+## Introduction
+
+The Cold War was a period of political, military, economic, and ideological rivalry between the United States and the Soviet Union. It developed after World War II and lasted from approximately 1947 until the dissolution of the Soviet Union in 1991.
+
+Unlike previous global conflicts, the Cold War did not develop into a direct full-scale war between the two superpowers. Instead, they competed through military alliances, nuclear weapons development, intelligence operations, political influence, economic competition, and support for opposing sides in regional conflicts.
+
+The rivalry divided much of the world into two opposing political and military blocs and shaped international relations for more than four decades.
+
+## 1. The Origins of the Cold War
+
+The origins of the Cold War can be traced to the growing disagreements between the United States and the Soviet Union during and immediately after World War II.
+
+Although both countries had fought against Nazi Germany, they had very different political and economic systems.
+
+The United States supported capitalism, private enterprise, and democratic institutions, while the Soviet Union promoted communism and a state-controlled economic system.
+
+After the defeat of Germany in 1945, disagreements over the future of Europe, especially Eastern Europe, increased tensions between the former allies.
+
+The Soviet Union established communist governments across much of Eastern Europe, while the United States opposed the expansion of Soviet influence.
+
+These differences gradually developed into a global rivalry.
+
+## 2. The Truman Doctrine and the Marshall Plan
+
+In 1947, the United States introduced the Truman Doctrine, a foreign policy aimed at containing the expansion of communism.
+
+President Harry S. Truman announced that the United States would support countries threatened by communist movements or external pressure. Greece and Turkey were among the first countries to receive American assistance.
+
+That same year, the United States introduced the Marshall Plan, an economic recovery program designed to rebuild Western European countries after World War II.
+
+The program provided financial assistance, equipment, and resources to help restore European economies.
+
+The Soviet Union rejected the plan and prevented countries under its influence from participating.
+
+These policies contributed to the growing division between Western and Eastern Europe.
+
+## 3. The Division of Europe
+
+After World War II, Europe became increasingly divided into two political and military spheres of influence.
+
+Western European countries generally maintained democratic governments and developed close economic and military relations with the United States.
+
+Eastern European countries came under Soviet influence, with communist governments established in Poland, Hungary, Romania, Bulgaria, Czechoslovakia, and other states.
+
+This division became known as the Iron Curtain, a term popularized by British Prime Minister Winston Churchill in 1946.
+
+The Iron Curtain symbolized the political, ideological, and military separation between Eastern and Western Europe.
+
+## 4. The Berlin Blockade and Airlift (1948–1949)
+
+Berlin became one of the first major flashpoints of the Cold War.
+
+Although the city was located inside the Soviet occupation zone of Germany, it was divided into four sectors controlled by the United States, the United Kingdom, France, and the Soviet Union.
+
+In June 1948, the Soviet Union blocked road, rail, and canal access to West Berlin in an attempt to force the Western powers to abandon their sectors.
+
+In response, the United States and the United Kingdom organized the Berlin Airlift.
+
+For almost a year, Allied aircraft delivered food, coal, medicine, and other essential supplies to the population of West Berlin.
+
+The Soviet Union eventually lifted the blockade in May 1949.
+
+The Berlin Blockade demonstrated the determination of the Western powers to maintain their presence in the city and became an important early confrontation of the Cold War.
+
+## 5. The Formation of NATO and the Warsaw Pact
+
+The growing military rivalry between the two blocs led to the creation of opposing military alliances.
+
+In April 1949, the United States, Canada, and several Western European countries established the North Atlantic Treaty Organization (NATO).
+
+NATO was created as a collective defense alliance, meaning that an attack against one member could be considered an attack against all members.
+
+In 1955, the Soviet Union and several Eastern European countries established the Warsaw Pact as a military alliance opposing NATO.
+
+The two organizations became the main military structures of the Cold War.
+
+Their existence strengthened the division of Europe and increased the possibility of a large-scale military confrontation.
+
+## 6. The Korean War (1950–1953)
+
+The Korean War was one of the first major military conflicts of the Cold War.
+
+After World War II, Korea was divided into two separate states along the 38th parallel.
+
+North Korea, supported by the Soviet Union and later China, adopted a communist system. South Korea received support from the United States and other Western countries.
+
+On June 25, 1950, North Korean forces invaded South Korea.
+
+The United Nations authorized a military intervention led by the United States to defend South Korea. Chinese forces later entered the conflict on the side of North Korea.
+
+After three years of intense fighting, an armistice was signed on July 27, 1953.
+
+The agreement ended large-scale fighting but did not establish a formal peace treaty. Korea remained divided into two separate states.
+
+The Korean War demonstrated how the Cold War rivalry could develop into a major regional military conflict.
+
+## 7. The Hungarian Revolution (1956)
+
+In October 1956, a popular uprising began in Hungary against the country's communist government and Soviet control.
+
+Demonstrators demanded political reforms, greater national independence, and the withdrawal of Soviet troops.
+
+The Soviet Union responded by sending military forces into Hungary to suppress the revolution.
+
+Soviet tanks and troops entered Budapest, and the uprising was defeated after several days of intense fighting.
+
+Thousands of Hungarians were killed or wounded, while many others fled the country.
+
+The Hungarian Revolution demonstrated the Soviet Union's willingness to use military force to maintain its influence over Eastern Europe.
+
+## 8. The Berlin Crisis and the Construction of the Berlin Wall (1958–1961)
+
+Berlin remained a major source of tension between the United States and the Soviet Union throughout the late 1950s.
+
+Large numbers of East Germans continued to leave the communist-controlled German Democratic Republic through West Berlin.
+
+This movement weakened the East German economy and created a serious political problem for the Soviet-backed government.
+
+On August 13, 1961, East German authorities began constructing the Berlin Wall, supported by the Soviet Union.
+
+The wall divided East and West Berlin, separating families, communities, and neighborhoods.
+
+It became one of the most recognizable symbols of the Cold War and the division between communist and Western Europe.
+
+## 9. The Cuban Missile Crisis (1962)
+
+The Cuban Missile Crisis was one of the most dangerous confrontations of the Cold War.
+
+Following the Cuban Revolution of 1959, Cuba developed close relations with the Soviet Union.
+
+In October 1962, the United States discovered Soviet nuclear missile installations being constructed in Cuba, located approximately 145 kilometers from the American coast.
+
+President John F. Kennedy responded by announcing a naval quarantine of Cuba to prevent additional Soviet military equipment from reaching the island.
+
+For thirteen days, the world faced the possibility of a nuclear war between the United States and the Soviet Union.
+
+The crisis ended after negotiations between Kennedy and Soviet leader Nikita Khrushchev.
+
+The Soviet Union agreed to remove its missiles from Cuba, while the United States publicly pledged not to invade Cuba and secretly agreed to remove American Jupiter missiles from Turkey.
+
+The Cuban Missile Crisis demonstrated the destructive potential of nuclear weapons and became a turning point in Cold War diplomacy.
+
+## Conclusion
+
+The early years of the Cold War established the political, military, and ideological foundations of the global rivalry between the United States and the Soviet Union.
+
+Events such as the Berlin Blockade, the formation of NATO and the Warsaw Pact, the Korean War, the Hungarian Revolution, and the Cuban Missile Crisis demonstrated how quickly political disagreements could develop into serious international confrontations.
+
+By 1962, the world had become divided into two major power blocs, each supported by powerful military forces and nuclear arsenals.
+
+Although the United States and the Soviet Union avoided direct war, their rivalry continued to shape international politics and military conflicts for decades.</div>
+          </section>
+
+          <section class="war-article-section" id="crises">
+            <h2><span>02</span> Major Cold War Conflicts</h2>
+            <div class="war-writing-area"># Major Cold War Conflicts (1950–1989)
+
+## Introduction
+
+Although the United States and the Soviet Union never fought a direct full-scale war against each other, the Cold War produced numerous military conflicts around the world.
+
+Both superpowers supported governments, political movements, and armed forces that shared their strategic interests. They provided weapons, military equipment, training, financial assistance, and sometimes direct military intervention.
+
+These conflicts, often called proxy wars, took place in Asia, Africa, the Middle East, and Latin America. They caused millions of casualties and had long-lasting political and social consequences.
+
+## 1. The Korean War (1950–1953)
+
+The Korean War was one of the first major military conflicts of the Cold War.
+
+Following the end of World War II, Korea was divided into two occupation zones. North Korea, supported by the Soviet Union and China, developed a communist government, while South Korea received support from the United States and other Western nations.
+
+On June 25, 1950, North Korean forces launched a large-scale invasion of South Korea.
+
+United Nations forces, led primarily by the United States, intervened to defend South Korea. After an initial North Korean advance, UN troops launched a counteroffensive, pushing north toward the Chinese border.
+
+China subsequently entered the war with large numbers of troops, forcing UN forces to retreat.
+
+Major battles included the Pusan Perimeter, the Inchon Landing, and the Battle of Chosin Reservoir.
+
+The fighting ended with an armistice signed on July 27, 1953. Korea remained divided near the 38th parallel, separated by the Korean Demilitarized Zone (DMZ).
+
+## 2. The Vietnam War (1955–1975)
+
+The Vietnam War was one of the longest and most significant conflicts of the Cold War.
+
+Vietnam had been divided into North Vietnam and South Vietnam following the First Indochina War. North Vietnam, led by Ho Chi Minh, was supported by the Soviet Union and China, while South Vietnam received extensive American military and economic assistance.
+
+The United States gradually increased its involvement, eventually deploying hundreds of thousands of troops.
+
+Major military operations included Operation Rolling Thunder, the Tet Offensive in 1968, and the extensive use of helicopters, airpower, and ground forces.
+
+Despite its superior military technology, the United States faced a determined enemy and difficult terrain, as well as growing opposition to the war at home.
+
+American combat troops withdrew in 1973 following the Paris Peace Accords.
+
+In April 1975, North Vietnamese forces captured Saigon, bringing South Vietnam's government to an end.
+
+Vietnam was reunified under communist rule in 1976.
+
+The conflict demonstrated the limitations of conventional military power when facing prolonged guerrilla warfare and strong local resistance.
+
+## 3. The Soviet–Afghan War (1979–1989)
+
+The Soviet–Afghan War began in December 1979 when the Soviet Union sent military forces into Afghanistan to support the country's communist government.
+
+The Soviet intervention was intended to prevent the collapse of the Afghan government and maintain Soviet influence in the region.
+
+However, Soviet forces faced strong resistance from Afghan mujahideen groups operating across the country's mountainous terrain.
+
+The United States, Pakistan, Saudi Arabia, and other countries provided various forms of support to anti-Soviet resistance groups. American assistance included weapons, financial support, and military supplies.
+
+The conflict involved conventional military operations, helicopter attacks, ambushes, and guerrilla warfare.
+
+One of the most significant developments was the introduction of American Stinger anti-aircraft missiles in 1986, which increased the danger to Soviet helicopters and aircraft.
+
+The Soviet Union began withdrawing its troops in 1988, and the withdrawal was completed on February 15, 1989.
+
+The war caused enormous destruction, millions of displaced people, and serious economic and political problems for Afghanistan.
+
+It also weakened the Soviet Union and became one of the major factors contributing to its declining international position.
+
+## 4. The Chinese Civil War and the Taiwan Strait Crises
+
+The Chinese Civil War between the Communist Party of China and the Nationalist Kuomintang forces resumed after World War II.
+
+In 1949, the Communist Party, led by Mao Zedong, established the People's Republic of China on the mainland.
+
+The Nationalist government, led by Chiang Kai-shek, retreated to Taiwan, where it continued to operate as the Republic of China.
+
+The division created a major strategic issue during the Cold War.
+
+The United States supported Taiwan, while the People's Republic of China developed close relations with the Soviet Union during the early years of communist rule.
+
+The First and Second Taiwan Strait Crises, in 1954–1955 and 1958, involved military confrontations between Chinese forces and the Republic of China.
+
+These crises increased tensions in East Asia and demonstrated the importance of Taiwan in the broader Cold War rivalry.
+
+## 5. The Congo Crisis (1960–1965)
+
+The Congo Crisis began shortly after the Democratic Republic of the Congo gained independence from Belgium in 1960.
+
+The country experienced political instability, military mutinies, regional separatist movements, and competition for control of valuable natural resources.
+
+The crisis attracted international attention as the United States and the Soviet Union sought to increase their influence in the newly independent African state.
+
+The United Nations deployed peacekeeping forces, while different political groups received support from foreign governments.
+
+Prime Minister Patrice Lumumba was removed from power and later assassinated in 1961.
+
+The crisis continued through several years of political and military conflict before a new government consolidated control.
+
+The Congo Crisis demonstrated how Cold War competition extended into newly independent African countries.
+
+## 6. The Arab–Israeli Wars and Superpower Rivalry
+
+The Middle East became another important region of Cold War competition.
+
+The United States developed strong relations with Israel, while the Soviet Union provided military equipment and support to several Arab states, including Egypt and Syria.
+
+Major regional conflicts included:
+
+- **Suez Crisis (1956):** A military intervention by Britain, France, and Israel against Egypt following the nationalization of the Suez Canal.
+- **Six-Day War (1967):** A conflict in which Israel defeated the armed forces of Egypt, Jordan, and Syria and captured significant territories.
+- **Yom Kippur War (1973):** Egypt and Syria launched a surprise attack against Israel, leading to a major regional conflict and increased superpower involvement.
+
+These wars were primarily regional conflicts, but American and Soviet support for opposing sides increased their importance within the wider Cold War.
+
+## 7. Conflicts in Central America
+
+During the 1970s and 1980s, several countries in Central America experienced civil wars and political instability.
+
+The United States supported governments and anti-communist movements, while Cuba and, in some cases, the Soviet Union supported left-wing revolutionary groups.
+
+In Nicaragua, the Sandinista National Liberation Front overthrew the Somoza government in 1979. The United States later supported the Contra forces fighting against the Sandinista government.
+
+El Salvador experienced a prolonged civil war between government forces and left-wing guerrilla organizations.
+
+These conflicts involved military operations, political violence, foreign assistance, and serious humanitarian consequences.
+
+They demonstrated that Cold War competition extended beyond Europe and Asia.
+
+## 8. Military Strategies and Methods of Cold War Warfare
+
+Cold War conflicts introduced and developed several important military strategies.
+
+**Guerrilla Warfare:** Irregular forces used ambushes, sabotage, small-unit attacks, and knowledge of local terrain to challenge larger conventional armies.
+
+**Counterinsurgency Operations:** Governments and foreign military forces developed strategies intended to defeat insurgent movements and maintain control over contested territories.
+
+**Air Power:** Aircraft and helicopters played major roles in reconnaissance, transportation, close air support, and strategic bombing.
+
+**Military Assistance:** Superpowers supplied weapons, training, intelligence, and financial support to allied governments and armed movements.
+
+**Special Operations:** Special forces conducted reconnaissance, sabotage, training missions, and other specialized military activities.
+
+These methods influenced military doctrine and continue to shape modern armed conflicts.
+
+## Conclusion
+
+The major conflicts of the Cold War demonstrated how political and ideological competition between the United States and the Soviet Union influenced military events across the world.
+
+From Korea and Vietnam to Afghanistan, Africa, and Central America, regional conflicts became part of a much larger international struggle.
+
+Although the two superpowers avoided direct full-scale war, their involvement contributed to prolonged fighting, massive human losses, and major political changes.
+
+The military lessons of these conflicts influenced international security, military strategy, and modern warfare long after the Cold War ended.</div>
+          </section>
+
+          <section class="war-article-section" id="rivalry">
+            <h2><span>03</span> Military Alliances, Leaders &amp; Technologies</h2>
+            <div class="war-writing-area"># Military Alliances, Leaders & Technology (1949–1991)
+
+## Introduction
+
+During the Cold War, the United States and the Soviet Union developed powerful military organizations, advanced weapons systems, and global networks of political and military alliances.
+
+Both superpowers believed that maintaining military superiority was essential to protecting their national interests and preventing the expansion of the opposing bloc.
+
+This period was characterized by the arms race, nuclear deterrence, intelligence operations, military research, and the development of advanced aircraft, tanks, submarines, and missile systems.
+
+## 1. NATO – The Western Military Alliance
+
+The North Atlantic Treaty Organization (NATO) was established on April 4, 1949, by the United States, Canada, and ten Western European countries.
+
+Its main purpose was to provide collective defense against potential military aggression.
+
+The founding members included:
+
+- United States
+- Canada
+- United Kingdom
+- France
+- Belgium
+- Netherlands
+- Luxembourg
+- Italy
+- Portugal
+- Denmark
+- Norway
+- Iceland
+
+NATO gradually expanded its military capabilities and developed integrated command structures.
+
+The United States became the alliance's leading military power, providing nuclear protection, conventional forces, aircraft, naval capabilities, and military equipment.
+
+West Germany joined NATO in 1955, further strengthening the alliance in Central Europe.
+
+## 2. The Warsaw Pact – The Eastern Military Alliance
+
+The Warsaw Pact was established on May 14, 1955, by the Soviet Union and several communist states in Eastern Europe.
+
+It was created as a military alliance opposing NATO and provided a framework for Soviet military influence over Eastern Europe.
+
+Its founding members were:
+
+- Soviet Union
+- Poland
+- East Germany
+- Czechoslovakia
+- Hungary
+- Romania
+- Bulgaria
+- Albania
+
+The Soviet Union dominated the alliance and maintained substantial military forces throughout Eastern Europe.
+
+Warsaw Pact troops were involved in major military interventions, including the suppression of the Hungarian Revolution in 1956 and the invasion of Czechoslovakia in 1968.
+
+The organization formally dissolved in 1991 following the collapse of communist governments across Eastern Europe.
+
+## 3. Major Military and Political Leaders
+
+### United States
+
+**Dwight D. Eisenhower (1953–1961)**
+
+Eisenhower served as President of the United States during an important period of Cold War military development. A former Supreme Allied Commander in Europe during World War II, he supported a strategy based heavily on nuclear deterrence.
+
+**John F. Kennedy (1961–1963)**
+
+Kennedy led the United States during the Berlin Crisis and the Cuban Missile Crisis. His presidency was marked by serious international tensions and efforts to prevent nuclear war.
+
+**Lyndon B. Johnson (1963–1969)**
+
+Johnson significantly expanded American military involvement in Vietnam, increasing the number of US troops deployed to Southeast Asia.
+
+**Richard Nixon (1969–1974)**
+
+Nixon pursued diplomatic relations with China and signed important arms control agreements with the Soviet Union, including the Strategic Arms Limitation Treaty (SALT I).
+
+### Soviet Union
+
+**Joseph Stalin (1924–1953)**
+
+Stalin led the Soviet Union during the early years of the Cold War. His government established communist influence across Eastern Europe and played a central role in the formation of the Eastern military bloc.
+
+**Nikita Khrushchev (1953–1964)**
+
+Khrushchev led the Soviet Union during the Cuban Missile Crisis and the early stages of nuclear competition with the United States.
+
+**Leonid Brezhnev (1964–1982)**
+
+Brezhnev oversaw a period of significant Soviet military expansion and the invasion of Afghanistan in 1979.
+
+**Mikhail Gorbachev (1985–1991)**
+
+Gorbachev introduced major political and economic reforms known as Glasnost and Perestroika. He also pursued improved relations with the West and signed important arms reduction agreements.
+
+## 4. The Nuclear Arms Race
+
+One of the defining characteristics of the Cold War was the development and expansion of nuclear weapons.
+
+The United States developed the first atomic bomb during World War II and became the first country to use nuclear weapons in warfare in August 1945.
+
+The Soviet Union successfully tested its first atomic bomb in 1949.
+
+Both countries subsequently developed increasingly powerful weapons, including hydrogen bombs, which had significantly greater destructive capacity than the first atomic bombs.
+
+The nuclear arms race led to the development of the strategic nuclear triad:
+
+- **Land-based missiles:** Intercontinental ballistic missiles (ICBMs) capable of delivering nuclear warheads over enormous distances.
+- **Strategic bombers:** Long-range aircraft designed to carry nuclear weapons.
+- **Ballistic missile submarines:** Submarines capable of launching nuclear missiles while remaining hidden underwater.
+
+The doctrine of Mutually Assured Destruction (MAD) became central to nuclear strategy. It was based on the idea that a nuclear attack would result in devastating retaliation, making a full-scale nuclear war extremely dangerous for both sides.
+
+## 5. Major Cold War Weapons and Military Technology
+
+The Cold War produced some of the most recognizable military equipment in modern history.
+
+### Tanks and Armored Vehicles
+
+- **M48 Patton:** An American main battle tank widely used during the early Cold War.
+- **M60 Patton:** A major American tank introduced in the late 1950s.
+- **M1 Abrams:** An advanced American main battle tank developed during the 1970s and introduced into service in 1980.
+- **T-54/T-55:** Soviet-designed tanks produced in large numbers and exported to numerous countries.
+- **T-62:** A Soviet main battle tank introduced in the early 1960s.
+- **T-72:** One of the most widely produced Soviet main battle tanks.
+- **T-80:** A Soviet tank introduced in the late 1970s, notable for its gas turbine engine in early versions.
+
+### Military Aircraft
+
+- **F-4 Phantom II:** An American fighter-bomber used extensively during the Vietnam War.
+- **F-14 Tomcat:** An American naval fighter known for its variable-sweep wings and long-range interception capabilities.
+- **F-15 Eagle:** An American air-superiority fighter developed to achieve dominance in aerial combat.
+- **F-16 Fighting Falcon:** A lightweight, multirole fighter that became widely used by NATO countries.
+- **MiG-21:** A Soviet supersonic fighter used by numerous air forces around the world.
+- **MiG-29:** A Soviet fighter designed for air superiority and frontline operations.
+- **MiG-31:** A Soviet interceptor developed to defend large areas of airspace.
+- **Su-27:** A Soviet air-superiority fighter developed to compete with advanced American aircraft.
+
+### Naval Forces and Submarines
+
+- **Los Angeles-class:** An American nuclear-powered attack submarine introduced in the 1970s.
+- **Ohio-class:** An American ballistic missile submarine designed to carry nuclear weapons.
+- **Typhoon-class:** A Soviet ballistic missile submarine and one of the largest submarines ever built.
+- **Kirov-class:** A large Soviet nuclear-powered guided-missile cruiser.
+- **Nimitz-class:** An American nuclear-powered aircraft carrier class introduced in 1975.
+
+### Small Arms and Infantry Weapons
+
+- **M16:** An American assault rifle that became widely used during the Vietnam War.
+- **AK-47:** A Soviet-designed assault rifle that became one of the most widely recognized firearms in history.
+- **AK-74:** A Soviet assault rifle introduced in the 1970s as a successor to the AK-47 and AKM.
+- **M60 Machine Gun:** An American general-purpose machine gun used by infantry and mounted on military vehicles.
+- **FN FAL:** A Belgian-designed battle rifle adopted by numerous Western-aligned countries.
+- **Heckler & Koch G3:** A German-designed battle rifle widely used by military forces around the world.
+
+## 6. Intelligence Agencies and Espionage
+
+Intelligence gathering and espionage played a major role in the Cold War.
+
+Both superpowers established extensive intelligence networks to collect information about military capabilities, political decisions, scientific developments, and strategic plans.
+
+Important intelligence organizations included:
+
+- **CIA (United States):** The Central Intelligence Agency conducted intelligence operations, analysis, and covert activities abroad.
+- **KGB (Soviet Union):** The Committee for State Security was responsible for foreign intelligence, domestic security, and counterintelligence.
+- **MI6 (United Kingdom):** Britain's foreign intelligence service gathered information and conducted overseas intelligence operations.
+- **GRU (Soviet Union):** Soviet military intelligence responsible for gathering information on foreign armed forces and military developments.
+
+Espionage activities included the use of undercover agents, surveillance, codebreaking, intercepted communications, and intelligence aircraft.
+
+The U-2 reconnaissance aircraft and later satellite systems provided important information about military installations and missile development.
+
+## 7. The Space Race and Military Competition
+
+The Cold War rivalry extended beyond Earth into outer space.
+
+The Soviet Union achieved an early milestone by launching Sputnik 1, the world's first artificial satellite, in October 1957.
+
+In April 1961, Soviet cosmonaut Yuri Gagarin became the first human to travel into space.
+
+The United States responded with major investments in space technology and established NASA's Apollo program.
+
+In July 1969, American astronauts Neil Armstrong and Buzz Aldrin became the first humans to walk on the Moon.
+
+Although the Space Race was primarily a competition in science, technology, and national prestige, many of its developments were closely connected to military research, rocket technology, and missile systems.
+
+## 8. Arms Control and Military Agreements
+
+Despite the intense arms race, both superpowers recognized the danger of uncontrolled nuclear competition.
+
+Several important agreements were introduced to limit certain weapons and reduce the risk of direct confrontation.
+
+**Partial Test Ban Treaty (1963):** Prohibited nuclear weapons testing in the atmosphere, outer space, and underwater.
+
+**Nuclear Non-Proliferation Treaty (1968):** Established an international framework intended to prevent the spread of nuclear weapons and promote peaceful nuclear cooperation.
+
+**SALT I (1972):** Limited certain strategic nuclear weapons systems and included the Anti-Ballistic Missile (ABM) Treaty.
+
+**Intermediate-Range Nuclear Forces Treaty (1987):** Signed by the United States and the Soviet Union, it eliminated an entire category of ground-launched intermediate-range and shorter-range missiles.
+
+These agreements represented important steps toward reducing nuclear tensions.
+
+## Conclusion
+
+Military alliances, political leadership, advanced technology, and nuclear weapons shaped the Cold War between 1949 and 1991.
+
+NATO and the Warsaw Pact represented the opposing military blocs, while the United States and the Soviet Union competed through military expansion, intelligence operations, technological innovation, and the nuclear arms race.
+
+The development of advanced aircraft, tanks, submarines, missiles, and space technology transformed modern military capabilities.
+
+Although the Cold War never developed into a direct full-scale war between the two superpowers, its military competition influenced global security and international relations for decades.</div>
+          </section>
+
+          <section class="war-article-section" id="end">
+            <h2><span>04</span> End of the Cold War &amp; Consequences</h2>
+            <div class="war-writing-area"># End of the Cold War & Consequences (1989–1991)
+
+## Introduction
+
+The Cold War came to an end between 1989 and 1991, marking one of the most important turning points in modern history.
+
+For more than four decades, the United States and the Soviet Union had competed for global influence through military alliances, nuclear weapons, political pressure, intelligence operations, and regional conflicts.
+
+By the late 1980s, however, the Soviet Union was facing serious economic difficulties, political instability, and growing demands for independence across Eastern Europe and its own republics.
+
+A series of political reforms, revolutions, and diplomatic agreements gradually weakened the communist bloc and brought the Cold War to an end.
+
+## 1. The Decline of the Soviet Union
+
+During the 1980s, the Soviet Union experienced increasing economic and political problems.
+
+Its centrally planned economy struggled with low productivity, shortages of consumer goods, and inefficient industrial production. Maintaining a large military establishment and competing with the United States in the arms race placed additional pressure on Soviet resources.
+
+The Soviet intervention in Afghanistan, which began in 1979, also became a costly and unpopular conflict.
+
+These problems weakened the Soviet government and increased public dissatisfaction.
+
+By the late 1980s, demands for political reform, economic change, and greater independence were spreading throughout the Soviet Union and Eastern Europe.
+
+## 2. Mikhail Gorbachev and Political Reforms
+
+Mikhail Gorbachev became General Secretary of the Communist Party of the Soviet Union in March 1985.
+
+He introduced two major reform policies:
+
+**Perestroika (Restructuring):** A program intended to reform the Soviet economy, introduce limited market mechanisms, and improve economic efficiency.
+
+**Glasnost (Openness):** A policy that allowed greater freedom of expression, increased public discussion, and more openness about political and social problems.
+
+Gorbachev also sought to reduce international tensions and improve relations with Western countries.
+
+His reforms changed Soviet society and weakened the traditional political control of the Communist Party.
+
+However, they also encouraged independence movements and political opposition across the Soviet Union.
+
+## 3. The Fall of the Berlin Wall (1989)
+
+The Berlin Wall had divided East and West Berlin since August 1961 and became one of the most recognizable symbols of the Cold War.
+
+By 1989, communist governments across Eastern Europe were facing growing protests and demands for political reform.
+
+On November 9, 1989, East German authorities announced new travel regulations that led to the opening of border crossings between East and West Berlin.
+
+Thousands of people gathered at the checkpoints, and border guards eventually allowed them to cross.
+
+People began climbing onto the wall and breaking sections of it.
+
+The fall of the Berlin Wall symbolized the collapse of the division between Eastern and Western Europe and became one of the defining events of the end of the Cold War.
+
+## 4. The Revolutions in Eastern Europe (1989)
+
+During 1989, communist governments across Eastern Europe began to lose power.
+
+Several countries experienced peaceful political transitions, while others faced periods of unrest and violence.
+
+Important events included:
+
+- **Poland:** The Solidarity movement played a major role in negotiations that led to partially free elections in June 1989 and the formation of a non-communist-led government later that year.
+- **Hungary:** The government introduced political reforms, opened its border with Austria, and began dismantling border restrictions.
+- **East Germany:** Mass demonstrations and the fall of the Berlin Wall accelerated the collapse of the communist government.
+- **Czechoslovakia:** The Velvet Revolution brought an end to communist rule through largely peaceful demonstrations and political negotiations.
+- **Romania:** The communist dictatorship of Nicolae Ceaușescu was overthrown during a violent revolution in December 1989. Ceaușescu and his wife were executed following a military trial.
+
+These events transformed the political structure of Eastern Europe and brought an end to decades of communist dominance in the region.
+
+## 5. German Reunification (1990)
+
+Following the fall of the Berlin Wall, the process of German reunification began.
+
+East Germany and West Germany had existed as separate states since 1949.
+
+Negotiations between the two German governments and the four occupying powers of World War II resulted in the Treaty on the Final Settlement with Respect to Germany, commonly known as the Two Plus Four Agreement.
+
+On October 3, 1990, East Germany officially joined the Federal Republic of Germany.
+
+German reunification symbolized the end of the postwar division of Europe and represented a major milestone in the collapse of the Cold War order.
+
+## 6. The Dissolution of the Warsaw Pact
+
+The collapse of communist governments in Eastern Europe weakened the military structure of the Soviet bloc.
+
+As these countries began moving toward political independence and closer relations with Western Europe, the Warsaw Pact gradually lost its purpose.
+
+The alliance's military structures were dissolved in 1991, and the organization formally ceased to exist on July 1, 1991.
+
+The end of the Warsaw Pact marked the collapse of the military alliance that had opposed NATO throughout much of the Cold War.
+
+## 7. The Dissolution of the Soviet Union (1991)
+
+By 1991, the Soviet Union was facing severe political and economic instability.
+
+Several Soviet republics had declared independence or were demanding greater sovereignty.
+
+In August 1991, a group of conservative communist officials attempted a coup against Gorbachev in an effort to stop his reforms and preserve the Soviet system.
+
+The coup failed after strong resistance, particularly in Moscow, where Boris Yeltsin emerged as a leading opponent of the attempted takeover.
+
+Following the failed coup, the Soviet government rapidly lost authority.
+
+On December 8, 1991, the leaders of Russia, Ukraine, and Belarus signed an agreement declaring that the Soviet Union would cease to exist and establishing the Commonwealth of Independent States.
+
+On December 25, 1991, Mikhail Gorbachev resigned as President of the Soviet Union.
+
+The Soviet flag was lowered from the Kremlin, and on December 26, 1991, the Soviet Union was formally dissolved.
+
+Fifteen independent states emerged from its former territory, including Russia, Ukraine, Belarus, Kazakhstan, and the Baltic states of Estonia, Latvia, and Lithuania.
+
+The dissolution of the Soviet Union is generally recognized as the final event marking the end of the Cold War.
+
+## 8. The Consequences of the Cold War
+
+The end of the Cold War transformed international politics, military relations, and the global balance of power.
+
+**The United States as the Leading Global Power:** With the Soviet Union dissolved, the United States emerged as the world's dominant military, political, and economic power.
+
+**The Expansion of NATO:** Several former communist countries in Central and Eastern Europe eventually joined NATO, changing the military and political balance in Europe.
+
+**The Independence of Former Soviet Republics:** Fifteen independent states emerged from the territory of the Soviet Union, each developing its own political and economic system.
+
+**Changes in Military Spending:** The collapse of the Soviet military bloc led to reductions in military spending and changes in defense policies in many countries.
+
+**Economic and Political Transformation:** Former communist countries began transitioning toward market-based economies and multiparty political systems, although the process was difficult and uneven.
+
+**New International Conflicts:** Although the Cold War ended, regional tensions, territorial disputes, and political instability continued in several parts of the world.
+
+## Conclusion
+
+The end of the Cold War between 1989 and 1991 marked the conclusion of more than four decades of rivalry between the United States and the Soviet Union.
+
+The fall of the Berlin Wall, the revolutions in Eastern Europe, German reunification, and the dissolution of the Soviet Union fundamentally changed the political map of the world.
+
+Although the threat of a direct nuclear confrontation between the two superpowers greatly diminished, the consequences of the Cold War continued to influence international relations, military alliances, and global security.
+
+The events of 1989–1991 established a new international order and marked the beginning of a different era in modern history.</div>
+          </section>
+        </div>
+
+        <aside class="war-article-nav" aria-label="Article sections">
+          <h3>On This Page</h3>
+          <ol>
+            <li><a href="#overview">Origins &amp; Major Crises</a></li>
+            <li><a href="#crises">Major Cold War Conflicts</a></li>
+            <li><a href="#rivalry">Military Alliances, Leaders &amp; Technologies</a></li>
+            <li><a href="#end">End of the Cold War &amp; Consequences</a></li>
+          </ol>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Military Base home">
+          <span class="logo-placeholder" aria-hidden="true"></span>
+          <span class="brand-name">MILITARY <span>BASE</span></span>
+        </a>
+        <p>A thoughtful reference to the forces, equipment, and stories that shape our world.</p>
+      </div>
+      <div class="footer-column">
+        <h2>EXPLORE</h2>
+        <a href="world-militaries.html">World Militaries</a>
+        <a href="military-units.html">Military Units</a>
+        <a href="military-ranks.html">Military Ranks</a>
+        <a href="weapons.html">Weapons</a>
+        <a href="hunting.html">Hunting</a>
+      </div>
+      <div class="footer-column">
+        <h2>DISCOVER</h2>
+        <a href="military-aviation.html">Military Aviation</a>
+        <a href="land-systems.html">Land Systems</a>
+        <a href="naval-forces.html">Naval Forces</a>
+        <a href="military-history.html">Military History</a>
+        <a href="../index.html#categories">All Categories</a>
+      </div>
+      <div class="footer-column footer-about">
+        <h2>ABOUT MILITARY BASE</h2>
+        <p>Building an accessible, well-organized encyclopedia of military and outdoor knowledge.</p>
+        <a href="mailto:contact@militarybase.example">Contact: contact@militarybase.example</a>
+      </div>
+    </div>
+    <div class="footer-bottom page-width">
+      <span>© 2026 MILITARY BASE. ALL RIGHTS RESERVED.</span>
+      <span>INFORMATION. CONTEXT. UNDERSTANDING.</span>
+      <a href="#main-content">BACK TO TOP ↑</a>
+    </div>
+  </footer>
+  <script>
+    document.querySelectorAll(".war-writing-area").forEach((area) => {
+      const lines = area.textContent.replace(/\r/g, "").split("\n");
+      const content = document.createDocumentFragment();
+      let paragraph = [];
+      let list = null;
+      let skippedMainHeading = false;
+
+      const appendInlineText = (element, text) => {
+        const parts = text.split(/(\*\*[^*]+\*\*)/g);
+        parts.forEach((part) => {
+          if (part.startsWith("**") && part.endsWith("**")) {
+            const strong = document.createElement("strong");
+            strong.textContent = part.slice(2, -2);
+            element.append(strong);
+          } else if (part) {
+            element.append(document.createTextNode(part));
+          }
+        });
+      };
+
+      const flushParagraph = () => {
+        if (!paragraph.length) return;
+        const element = document.createElement("p");
+        appendInlineText(element, paragraph.join(" "));
+        content.append(element);
+        paragraph = [];
+      };
+
+      const closeList = () => {
+        if (!list) return;
+        content.append(list);
+        list = null;
+      };
+
+      lines.forEach((rawLine) => {
+        const line = rawLine.trim();
+        if (!line) {
+          flushParagraph();
+          closeList();
+          return;
+        }
+
+        const heading = line.match(/^(#{1,3})\s+(.+)$/);
+        if (heading) {
+          flushParagraph();
+          closeList();
+          if (heading[1] === "#" && !skippedMainHeading) {
+            skippedMainHeading = true;
+            return;
+          }
+          const element = document.createElement(heading[1].length === 3 ? "h5" : "h4");
+          appendInlineText(element, heading[2]);
+          content.append(element);
+          return;
+        }
+
+        const item = line.match(/^[-*]\s+(.+)$/);
+        if (item) {
+          flushParagraph();
+          if (!list) list = document.createElement("ul");
+          const element = document.createElement("li");
+          appendInlineText(element, item[1]);
+          list.append(element);
+          return;
+        }
+
+        closeList();
+        if (/^\d+\.\s+[A-Z][^.!?]{0,60}$/.test(line)) {
+          flushParagraph();
+          const element = document.createElement("h4");
+          appendInlineText(element, line.replace(/^\d+\.\s+/, ""));
+          content.append(element);
+          return;
+        }
+        paragraph.push(line);
+      });
+
+      flushParagraph();
+      closeList();
+      area.replaceChildren(content);
+      area.classList.add("is-formatted");
+    });
+  </script>
+  <script src="../language.js" defer></script>
+</body>
+</html>

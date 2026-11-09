@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Modern conflicts article page.">
+  <meta name="theme-color" content="#111411">
+  <title>Modern Conflicts | MILITARY BASE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .section-hero--modern-conflicts {
+      background-image: url("../photos/home-page-photos/modern-conflicts.jpg");
+      background-position: center 45%;
+    }
+
+    .war-article { padding-block: 42px 100px; }
+    .war-breadcrumbs {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 32px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .war-breadcrumbs a { color: var(--olive-bright); }
+    .war-article-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 260px;
+      align-items: start;
+      gap: 26px;
+    }
+    .war-article-content { display: grid; gap: 20px; }
+    .war-article-section,
+    .war-article-nav {
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, rgba(32, 37, 31, 0.86), rgba(25, 29, 25, 0.94));
+    }
+    .war-article-section {
+      padding: clamp(22px, 3.2vw, 36px);
+      border-left: 2px solid rgba(195, 195, 148, 0.55);
+      scroll-margin-top: 100px;
+    }
+    .war-article-section h2,
+    .war-article-nav h3 {
+      margin: 0;
+      font-family: var(--heading-font);
+      font-size: 27px;
+      font-weight: 600;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+    .war-article-section h2 {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+      font-size: clamp(25px, 3vw, 32px);
+    }
+    .war-article-section h2 span {
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+    }
+    .war-writing-area {
+      min-height: 200px;
+      margin-top: 20px;
+      color: #d3d4ca;
+      font-size: 15px;
+      line-height: 1.85;
+      white-space: pre-line;
+    }
+    .war-writing-area.is-formatted { white-space: normal; }
+    .war-writing-area p { max-width: 76ch; margin: 0 0 1.15em; }
+    .war-writing-area p:last-child,
+    .war-writing-area ul:last-child { margin-bottom: 0; }
+    .war-writing-area h4 {
+      margin: 1.8em 0 0.55em;
+      color: var(--olive-bright);
+      font-family: var(--heading-font);
+      font-size: 23px;
+      font-weight: 600;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+    .war-writing-area h4:first-child { margin-top: 0; }
+    .war-writing-area h5 {
+      margin: 1.35em 0 0.4em;
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .war-writing-area ul {
+      display: grid;
+      gap: 9px;
+      max-width: 76ch;
+      margin: 0 0 1.2em;
+      padding-left: 22px;
+    }
+    .war-writing-area li { padding-left: 3px; }
+    .war-writing-area li::marker { color: var(--gold); }
+    .war-writing-area strong { color: var(--white); font-weight: 700; }
+    .war-article-nav {
+      position: sticky;
+      top: 100px;
+      padding: 22px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+    .war-article-nav h3 {
+      margin-bottom: 15px;
+      color: var(--olive-bright);
+      font-size: 21px;
+    }
+    .war-article-nav ol {
+      display: grid;
+      gap: 4px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .war-article-nav a {
+      display: block;
+      padding: 10px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      transition: color 180ms ease;
+    }
+    .war-article-nav a:hover,
+    .war-article-nav a:focus-visible { color: var(--olive-bright); }
+    @media (max-width: 760px) {
+      .war-article { padding-block: 42px 72px; }
+      .war-article-layout { grid-template-columns: 1fr; }
+      .war-article-nav { position: static; grid-row: 1; }
+      .war-article-section { padding: 22px 18px; }
+      .war-writing-area { font-size: 14px; line-height: 1.8; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html" aria-label="Military Base home">
+        <span class="logo-placeholder" aria-hidden="true"></span>
+        <span class="brand-name">MILITARY <span>BASE</span></span>
+      </a>
+      <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation">
+      <label class="menu-button" for="menu-toggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-home" href="../index.html">Home</a>
+        <a href="world-militaries.html">World Militaries</a>
+        <a href="military-units.html">Military Units</a>
+        <a href="military-ranks.html">Military Ranks</a>
+        <a href="weapons.html">Weapons</a>
+        <a href="military-aviation.html">Military Aviation</a>
+        <a href="land-systems.html">Land Systems</a>
+        <a href="naval-forces.html">Naval Forces</a>
+        <a href="hunting.html">Hunting</a>
+        <a href="military-history.html">Military History</a>
+      </nav>
+      <a class="header-search" href="military-history.html" aria-label="Back to Military History">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="10.8" cy="10.8" r="6.8"></circle>
+          <path d="m16 16 5 5"></path>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section-hero section-hero--modern-conflicts">
+      <div class="page-width section-hero-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> MILITARY HISTORY</p>
+        <h1>MODERN <span>CONFLICTS</span></h1>
+        <a class="text-link" href="military-history.html">← Back to Military History</a>
+      </div>
+    </section>
+
+    <article class="war-article page-width">
+      <nav class="war-breadcrumbs" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="military-history.html">Military History</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Modern Conflicts</span>
+      </nav>
+
+      <div class="war-article-layout">
+        <div class="war-article-content">
+          <section class="war-article-section" id="overview">
+            <h2><span>01</span> Post Cold War Conflicts</h2>
+            <div class="war-writing-area"># Post-Cold War Conflicts (1991–2001)
+
+## Introduction
+
+The end of the Cold War in 1991 marked the beginning of a new period in international relations and military history.
+
+With the dissolution of the Soviet Union, the United States emerged as the world's leading military power. However, the end of the rivalry between the two superpowers did not bring global peace.
+
+During the 1990s, numerous regional wars, civil conflicts, military interventions, and humanitarian crises took place across Europe, Africa, the Middle East, and Asia.
+
+These conflicts demonstrated that modern warfare was changing, with international coalitions, peacekeeping missions, precision-guided weapons, and humanitarian interventions becoming increasingly important.
+
+## 1. The Gulf War (1990–1991)
+
+The Gulf War was one of the most significant military conflicts of the early post-Cold War period.
+
+On August 2, 1990, Iraq, led by President Saddam Hussein, invaded neighboring Kuwait. The invasion was motivated by territorial disputes, economic tensions, and disagreements over oil production.
+
+The international community condemned the invasion, and the United Nations imposed economic sanctions on Iraq.
+
+A US-led international coalition was formed, bringing together more than 30 countries to liberate Kuwait.
+
+In January 1991, coalition forces launched Operation Desert Storm, beginning with a massive aerial campaign against Iraqi military installations, communication networks, and infrastructure.
+
+On February 24, 1991, coalition ground forces began a large-scale offensive.
+
+After approximately 100 hours of ground combat, Iraqi forces were defeated and Kuwait was liberated.
+
+A ceasefire was declared on February 28, 1991.
+
+The Gulf War demonstrated the effectiveness of modern air power, advanced surveillance systems, precision-guided weapons, and multinational military cooperation.
+
+## 2. The Yugoslav Wars (1991–2001)
+
+The breakup of the Socialist Federal Republic of Yugoslavia led to a series of armed conflicts during the 1990s.
+
+Political instability, rising nationalism, economic difficulties, and disagreements over the future of the federation contributed to the disintegration of the country.
+
+The conflicts involved several republics and ethnic communities and resulted in extensive destruction, displacement, and loss of life.
+
+### The Ten-Day War (1991)
+
+Slovenia declared independence on June 25, 1991.
+
+The Yugoslav People's Army (JNA) intervened to maintain federal control, leading to a short armed conflict between Slovenian forces and the federal military.
+
+The fighting lasted ten days and ended with the Brioni Agreement, after which Yugoslav forces began withdrawing from Slovenia.
+
+### The Croatian War of Independence (1991–1995)
+
+Croatia declared independence in 1991, leading to armed conflict involving Croatian forces, the Yugoslav People's Army, and Serb forces in Croatia.
+
+Major events included the Battle of Vukovar, the siege of Dubrovnik, and large-scale military operations during 1995.
+
+The conflict caused extensive destruction and significant civilian suffering.
+
+The Dayton Agreement and subsequent international arrangements helped establish the framework for regional stabilization, although the Croatian conflict itself ended through a combination of military developments and peaceful reintegration processes.
+
+### The Bosnian War (1992–1995)
+
+Bosnia and Herzegovina declared independence in 1992, triggering a devastating war involving Bosniak, Serb, and Croat forces.
+
+The conflict included prolonged sieges, ethnic cleansing, mass displacement, and serious violations of international humanitarian law.
+
+The Siege of Sarajevo lasted from 1992 to 1996 and became one of the longest sieges of a capital city in modern history.
+
+In July 1995, the Srebrenica genocide resulted in the murder of more than 8,000 Bosniak men and boys by Bosnian Serb forces.
+
+The war ended with the Dayton Peace Agreement, signed in December 1995, which established the constitutional framework for postwar Bosnia and Herzegovina.
+
+### The Kosovo War (1998–1999)
+
+The Kosovo War involved Serbian and Yugoslav security forces and the Kosovo Liberation Army (KLA).
+
+The conflict escalated in 1998 and was marked by armed clashes, displacement of civilians, and serious human rights abuses.
+
+In March 1999, NATO launched an air campaign against the Federal Republic of Yugoslavia, known as Operation Allied Force.
+
+The bombing campaign lasted 78 days and ended in June 1999 following an agreement that led to the withdrawal of Yugoslav and Serbian forces from Kosovo.
+
+United Nations Security Council Resolution 1244 established an international security presence and an interim international administration in Kosovo.
+
+### The Insurgency in the Preševo Valley and the Conflict in Macedonia (2000–2001)
+
+Following the Kosovo War, armed clashes also occurred in southern Serbia, particularly in the Preševo Valley, between Serbian security forces and Albanian armed groups.
+
+In 2001, an armed conflict also developed in the Republic of Macedonia between Macedonian security forces and Albanian insurgents.
+
+The Ohrid Framework Agreement, signed in August 2001, helped end the conflict and introduced political and institutional reforms.
+
+## 3. The Somali Civil War and International Intervention (1991–1995)
+
+The Somali Civil War began in 1991 after the overthrow of President Siad Barre.
+
+The collapse of central government authority led to fighting between rival armed factions and widespread humanitarian suffering.
+
+Severe drought, famine, and insecurity created an international humanitarian crisis.
+
+In December 1992, the United States led a United Nations-supported military intervention known as Operation Restore Hope.
+
+The mission aimed to secure humanitarian aid deliveries and protect relief operations.
+
+In October 1993, the Battle of Mogadishu took place when American forces attempted to capture senior figures from a powerful Somali faction.
+
+The operation resulted in significant casualties and became widely known through the events surrounding the downing of American helicopters.
+
+American forces withdrew in 1994, and the wider UN mission ended in 1995.
+
+The conflict demonstrated the difficulties of conducting military operations in unstable states where armed factions operate without a unified national authority.
+
+## 4. The Rwandan Genocide (1994)
+
+In 1994, Rwanda experienced one of the worst genocides of the twentieth century.
+
+Following decades of ethnic and political tensions, the assassination of President Juvénal Habyarimana on April 6, 1994, triggered an organized campaign of mass violence.
+
+Extremist Hutu leaders and armed groups carried out the systematic murder of Tutsi civilians and moderate Hutu.
+
+Approximately 800,000 people were killed in around 100 days.
+
+The Rwandan Patriotic Front (RPF), led by Paul Kagame, launched a military offensive and eventually defeated the government forces responsible for the genocide.
+
+The international community faced widespread criticism for failing to prevent the mass killings despite the presence of a United Nations peacekeeping mission.
+
+The genocide became a major turning point in discussions about international intervention, civilian protection, and the responsibility to prevent mass atrocities.
+
+## 5. The First Chechen War (1994–1996)
+
+The First Chechen War began in December 1994 when Russian forces entered Chechnya to restore Moscow's control over the breakaway republic.
+
+Chechen separatists had declared independence following the dissolution of the Soviet Union.
+
+Russian forces launched a major military offensive, including an assault on the capital, Grozny.
+
+The fighting involved urban warfare, artillery bombardments, armored vehicles, and guerrilla tactics.
+
+Chechen fighters used their knowledge of the terrain and small-unit operations to resist the larger Russian military.
+
+A ceasefire and peace agreement were reached in 1996, resulting in the withdrawal of Russian forces and a period of de facto Chechen independence.
+
+The conflict exposed serious weaknesses in Russian military organization and demonstrated the challenges of conducting urban military operations.
+
+## 6. The NATO Intervention in Bosnia (1995)
+
+During the Bosnian War, NATO increasingly became involved in efforts to protect designated UN safe areas and enforce international military restrictions.
+
+In August and September 1995, NATO launched Operation Deliberate Force, an air campaign against Bosnian Serb military positions.
+
+The operation followed the escalation of attacks against protected areas and formed part of wider international efforts to bring the conflict to an end.
+
+NATO air strikes, combined with developments on the ground and diplomatic negotiations, contributed to the conditions that led to the Dayton Peace Agreement in December 1995.
+
+This intervention demonstrated NATO's growing role in military operations beyond the territory of its member states.
+
+## 7. Military Technology and Warfare in the 1990s
+
+The conflicts of the 1990s demonstrated the increasing importance of advanced military technology.
+
+Several major developments influenced modern warfare:
+
+**Precision-Guided Weapons:** Laser-guided bombs and other precision weapons allowed military forces to strike selected targets with greater accuracy.
+
+**Satellite Navigation:** GPS technology improved military navigation, targeting, and coordination.
+
+**Stealth Aircraft:** Aircraft such as the F-117 Nighthawk demonstrated the military value of reduced radar visibility.
+
+**Advanced Surveillance:** Reconnaissance aircraft, satellites, and electronic intelligence systems improved battlefield awareness.
+
+**Multinational Operations:** International coalitions increasingly combined forces, equipment, and intelligence from several countries.
+
+These developments helped establish many of the technological foundations of twenty-first-century warfare.
+
+## Conclusion
+
+The period between 1991 and 2001 was marked by major regional conflicts, civil wars, humanitarian disasters, and international military interventions.
+
+The Gulf War demonstrated the power of modern military coalitions and advanced weapons technology, while the Yugoslav Wars exposed the devastating consequences of political fragmentation and ethnic violence.
+
+Conflicts in Somalia, Rwanda, and Chechnya further demonstrated the challenges of international intervention and the protection of civilian populations.
+
+By the beginning of the twenty-first century, warfare had become increasingly influenced by precision weapons, advanced surveillance, international coalitions, and complex regional political struggles.</div>
+          </section>
+
+          <section class="war-article-section" id="conflicts">
+            <h2><span>02</span> War on Terror</h2>
+            <div class="war-writing-area"># War on Terror (2001–2021)
+
+## Introduction
+
+The War on Terror was an international military and political campaign launched by the United States and its allies following the terrorist attacks of September 11, 2001.
+
+The attacks, carried out by the terrorist organization Al-Qaeda, killed nearly 3,000 people and targeted the World Trade Center in New York and the Pentagon in Washington, D.C.
+
+In response, the United States declared a global campaign against international terrorism.
+
+The campaign included military operations, intelligence cooperation, counterterrorism missions, and interventions in several countries.
+
+The two most significant military conflicts of this period were the wars in Afghanistan and Iraq.
+
+## 1. The September 11 Attacks (2001)
+
+On September 11, 2001, 19 terrorists associated with Al-Qaeda hijacked four commercial passenger aircraft in the United States.
+
+Two aircraft were deliberately crashed into the World Trade Center towers in New York City. A third aircraft struck the Pentagon, while the fourth crashed in Pennsylvania after passengers attempted to regain control.
+
+The attacks destroyed the Twin Towers and caused the deaths of nearly 3,000 people.
+
+Al-Qaeda, led by Osama bin Laden, claimed responsibility for the attacks.
+
+The events of September 11 fundamentally changed international security policies and led to the beginning of large-scale military operations against terrorist organizations.
+
+## 2. The War in Afghanistan (2001–2021)
+
+The War in Afghanistan began in October 2001 when the United States and its allies launched Operation Enduring Freedom.
+
+The main objectives were to dismantle Al-Qaeda's infrastructure and remove the Taliban government, which had provided sanctuary to the organization.
+
+American and allied forces supported Afghan opposition groups, particularly the Northern Alliance, during the initial military campaign.
+
+By December 2001, the Taliban government had been removed from power, although the organization continued operating as an insurgent movement.
+
+A new Afghan government was established with international support, and NATO later assumed a major role in the International Security Assistance Force (ISAF).
+
+Despite years of military operations, the Taliban gradually regained strength and continued attacks against Afghan and international forces.
+
+In 2021, the United States and its NATO allies completed their military withdrawal. The Taliban launched a major offensive and regained control of Kabul on August 15, 2021.
+
+The collapse of the Afghan government marked the end of the international military mission and one of the longest wars in modern American history.
+
+## 3. The Iraq War (2003–2011)
+
+The Iraq War began on March 20, 2003, when a US-led coalition invaded Iraq.
+
+The administration of President George W. Bush argued that Iraq possessed weapons of mass destruction and represented a serious security threat. These weapons were not found after the invasion.
+
+The military campaign, known as Operation Iraqi Freedom, began with extensive air strikes and a rapid ground offensive.
+
+Coalition forces quickly captured Baghdad, and Saddam Hussein's government collapsed in April 2003.
+
+Saddam Hussein was captured in December 2003 and later executed in December 2006.
+
+However, the collapse of the Iraqi government was followed by widespread instability, insurgency, sectarian violence, and attacks against coalition forces.
+
+The conflict became increasingly complex, involving Iraqi insurgent groups, sectarian militias, foreign fighters, and international military forces.
+
+American combat operations officially ended in December 2011, although the security situation in Iraq remained unstable.
+
+## 4. The Rise of Al-Qaeda and Global Counterterrorism Operations
+
+Al-Qaeda became one of the main targets of the international War on Terror.
+
+Following the September 11 attacks, the United States expanded intelligence operations and military cooperation with numerous countries.
+
+Counterterrorism efforts included:
+
+- International intelligence sharing.
+- Financial investigations targeting terrorist networks.
+- Military operations against Al-Qaeda leaders and infrastructure.
+- Increased airport and border security.
+- Cooperation between intelligence and law enforcement agencies.
+
+One of the most significant operations took place on May 2, 2011, when American special operations forces conducted a raid in Abbottabad, Pakistan.
+
+The operation resulted in the death of Osama bin Laden, the founder and leader of Al-Qaeda.
+
+His death represented a major symbolic achievement in the international campaign against terrorism.
+
+## 5. The Rise of ISIS (2013–2019)
+
+The Islamic State of Iraq and Syria (ISIS), also known as ISIL or Daesh, emerged from extremist militant networks operating in Iraq and Syria.
+
+The organization expanded rapidly during the Syrian Civil War and the instability that followed the Iraq War.
+
+In 2014, ISIS captured large territories in Iraq and Syria, including the major Iraqi city of Mosul.
+
+The organization declared a self-proclaimed caliphate and established control over areas of both countries.
+
+ISIS became internationally known for terrorist attacks, mass executions, destruction of cultural heritage, and severe persecution of civilians.
+
+In response, an international coalition led by the United States launched military operations against ISIS in 2014.
+
+The campaign included air strikes, intelligence operations, military assistance to local forces, and ground operations conducted primarily by partner forces.
+
+Major territorial defeats included the recapture of Mosul in 2017 and the fall of Baghouz in March 2019, which marked the end of ISIS's territorial control in its last major stronghold.
+
+Although its territorial control was largely eliminated, ISIS continued to operate as an insurgent and terrorist organization.
+
+## 6. International Military Operations Against Terrorism
+
+The War on Terror expanded beyond Afghanistan and Iraq.
+
+Several countries participated in military and security operations against terrorist organizations across different regions.
+
+**Pakistan:** American counterterrorism operations targeted Al-Qaeda and other militant networks operating near the Afghan border.
+
+**Somalia:** International forces supported operations against Al-Shabaab, an extremist organization linked to Al-Qaeda.
+
+**Yemen:** The United States and regional partners conducted counterterrorism operations against Al-Qaeda in the Arabian Peninsula (AQAP).
+
+**North Africa:** International security cooperation increased in response to the expansion of extremist organizations and instability in the Sahel region.
+
+These operations demonstrated that counterterrorism had become a global security priority.
+
+## 7. Military Technology and Modern Counterterrorism
+
+The War on Terror accelerated the development and use of several modern military technologies.
+
+**Unmanned Aerial Vehicles (UAVs):** Military drones were increasingly used for surveillance, reconnaissance, and targeted strikes.
+
+**Special Operations Forces:** Specialized military units became central to hostage rescue, intelligence missions, counterterrorism operations, and raids against high-value targets.
+
+**Satellite Surveillance:** Advanced satellite systems improved intelligence gathering, navigation, and battlefield coordination.
+
+**Night Vision and Thermal Imaging:** These technologies allowed military forces to operate more effectively in low-light conditions.
+
+**Electronic Intelligence:** Modern communication interception and intelligence systems became increasingly important in identifying and monitoring terrorist networks.
+
+**Mine-Resistant Vehicles:** Vehicles such as the MRAP were developed and widely deployed to protect personnel against improvised explosive devices and roadside attacks.
+
+These developments significantly influenced military doctrine and the organization of modern armed forces.
+
+## 8. The Consequences of the War on Terror
+
+The War on Terror had major political, military, economic, and humanitarian consequences.
+
+Millions of people were displaced by conflicts in Afghanistan, Iraq, Syria, and other affected countries.
+
+The wars caused extensive destruction, civilian casualties, economic instability, and long-term humanitarian crises.
+
+The United States and its allies spent enormous financial resources on military operations, reconstruction, intelligence, and security programs.
+
+The conflicts also generated significant international debate about military intervention, civilian protection, surveillance, human rights, and the limits of national security policies.
+
+The withdrawal from Afghanistan in 2021 marked the end of the main international military campaign in that country, but terrorism and regional instability remained major international challenges.
+
+## Conclusion
+
+The War on Terror transformed international military strategy and security policy during the first two decades of the twenty-first century.
+
+The September 11 attacks led to major military interventions in Afghanistan and Iraq, while the emergence of ISIS created another large-scale international security challenge.
+
+Modern counterterrorism increasingly relied on intelligence cooperation, special operations forces, unmanned aircraft, surveillance systems, and multinational military coalitions.
+
+Although several major terrorist organizations suffered significant military defeats, the conflicts of this period demonstrated that defeating armed groups does not necessarily guarantee long-term political stability or peace.</div>
+          </section>
+
+          <section class="war-article-section" id="forces">
+            <h2><span>03</span> Regional Wars &amp; Military Intervensions</h2>
+            <div class="war-writing-area"># Regional Wars & Military Interventions (2011–Present)
+
+## Introduction
+
+The period beginning in 2011 was marked by a new wave of regional conflicts, political uprisings, civil wars, and foreign military interventions. The Arab Spring, which began in late 2010 and spread across the Middle East and North Africa in 2011, challenged long-standing governments and contributed to major political changes.
+
+Several countries experienced prolonged armed conflicts involving government forces, rebel movements, extremist organizations, and foreign powers. Unlike many conventional wars of the twentieth century, these conflicts often involved multiple competing factions, proxy forces, international coalitions, and complex political objectives.
+
+Among the most significant conflicts of this period were the Libyan Civil War, the Syrian Civil War, the war in Yemen, the Nagorno-Karabakh conflict, and insurgencies across the Sahel region of Africa.
+
+## 1. The Libyan Civil War (2011)
+
+The Libyan Civil War began in February 2011 as part of the Arab Spring. Protests against the government of Muammar Gaddafi quickly developed into an armed uprising.
+
+Government forces attempted to suppress the rebellion, while opposition groups established control over several cities and formed an organized resistance. As the fighting intensified, the United Nations Security Council authorized measures to protect civilians.
+
+In March 2011, NATO launched **Operation Unified Protector**, enforcing an arms embargo, a no-fly zone, and military measures intended to protect civilians. NATO aircraft carried out air operations against Libyan government forces and military installations.
+
+By August 2011, opposition fighters had captured Tripoli. Muammar Gaddafi was captured and killed in October 2011, bringing his government to an end.
+
+However, the collapse of the central government did not produce lasting stability. Rival militias and political factions competed for power, and Libya experienced renewed periods of civil conflict, particularly from 2014 onward.
+
+The Libyan conflict demonstrated how the fall of an established government could create a prolonged security vacuum and political fragmentation.
+
+## 2. The Syrian Civil War (2011–2024)
+
+The Syrian Civil War began in March 2011, when protests against President Bashar al-Assad's government developed into a nationwide uprising. The government's response contributed to the escalation of violence, and armed opposition groups gradually emerged.
+
+The conflict became increasingly complex as different political, religious, and military organizations competed for territory and influence.
+
+### Major Forces Involved
+
+Several major actors participated in the conflict:
+
+- **Syrian Government Forces:** The armed forces loyal to Bashar al-Assad.
+- **Syrian Opposition Groups:** Different armed organizations seeking to overthrow the government.
+- **Islamic State (ISIS):** An extremist organization that captured large areas of Syria and Iraq.
+- **Syrian Democratic Forces (SDF):** A coalition dominated by Kurdish fighters that played a major role in operations against ISIS.
+- **Foreign Military Forces:** Russia, Iran, Turkey, the United States, and other countries became involved at different stages of the conflict.
+
+### Foreign Military Intervention
+
+In September 2015, Russia launched a military intervention in support of the Syrian government. Russian aircraft carried out airstrikes and provided military assistance to government forces.
+
+Iran also supported the Assad government, while Hezbollah fighters from Lebanon participated in several important battles.
+
+The United States led an international coalition against ISIS beginning in 2014. American forces provided air support, training, and assistance to local partners fighting the organization.
+
+Turkey conducted several military operations in northern Syria, targeting Kurdish-led forces and other armed groups.
+
+### The Fall of the Assad Government
+
+After more than thirteen years of conflict, a major rebel offensive began in November 2024. Opposition forces captured several major cities before entering Damascus on December 8, 2024.
+
+Bashar al-Assad left Syria, ending more than five decades of rule by the Assad family.
+
+A transitional government was subsequently established under Ahmed al-Sharaa. However, Syria continued to face serious political, security, and humanitarian challenges.
+
+The Syrian Civil War became one of the most destructive conflicts of the twenty-first century, causing massive displacement, extensive destruction, and significant regional instability.
+
+## 3. The War in Yemen (2014–Present)
+
+The conflict in Yemen escalated in 2014 when the Houthi movement, also known as Ansar Allah, captured the capital city of Sana'a and challenged the internationally recognized government.
+
+In March 2015, a Saudi-led military coalition intervened in support of the Yemeni government. The coalition conducted airstrikes and military operations against Houthi forces.
+
+The conflict gradually developed into a wider regional struggle involving Saudi Arabia, Iran, the United Arab Emirates, and other international actors.
+
+### Major Developments
+
+The Houthis established control over large parts of northwestern Yemen, including Sana'a. Government forces and other anti-Houthi groups continued fighting to regain territory.
+
+The war caused a severe humanitarian crisis. Millions of people were displaced, while shortages of food, clean water, medical supplies, and basic services affected large parts of the population.
+
+In 2022, a United Nations-mediated truce significantly reduced large-scale fighting, although it did not produce a permanent peace agreement.
+
+From late 2023, Houthi attacks on commercial vessels in the Red Sea and surrounding waters expanded the conflict's international dimension. The attacks prompted military responses from the United States and other countries.
+
+By 2026, renewed military activity and regional tensions had increased concerns about a return to large-scale fighting.
+
+The war in Yemen demonstrated the importance of maritime security and the strategic value of the Red Sea and the Bab el-Mandeb Strait.
+
+## 4. The Nagorno-Karabakh Conflicts (2016–2023)
+
+Nagorno-Karabakh is a mountainous region in the South Caucasus that became the center of a long-running territorial conflict between Armenia and Azerbaijan.
+
+Although the dispute dates back to the final years of the Soviet Union, major military confrontations continued during the twenty-first century.
+
+### The Four-Day War (2016)
+
+In April 2016, Armenian and Azerbaijani forces engaged in several days of intense fighting along the line of contact. Both sides used artillery, armored vehicles, and other military equipment.
+
+The clashes demonstrated that the conflict remained unresolved despite years of diplomatic negotiations.
+
+### The Second Nagorno-Karabakh War (2020)
+
+In September 2020, large-scale fighting broke out between Armenia and Azerbaijan.
+
+Azerbaijan used modern military technology, including unmanned aerial vehicles, precision-guided weapons, and artillery systems. Turkish military support also played an important role in the conflict.
+
+After approximately six weeks of fighting, a Russian-brokered ceasefire agreement was signed in November 2020.
+
+Azerbaijan regained control over several territories, while Russian peacekeepers were deployed to parts of the region.
+
+### The Azerbaijani Offensive (2023)
+
+In September 2023, Azerbaijan launched a military operation that resulted in the rapid defeat of the remaining Armenian forces in Nagorno-Karabakh.
+
+The region's de facto authorities agreed to disarm and dissolve their institutions. More than 100,000 ethnic Armenians subsequently left the region and moved to Armenia.
+
+The developments of 2023 brought the long-standing territorial conflict in Nagorno-Karabakh to a decisive turning point.
+
+In August 2025, Armenia and Azerbaijan signed a joint peace declaration in Washington, creating a framework for further diplomatic negotiations. However, the implementation and ratification of a lasting peace agreement remained important challenges.
+
+## 5. Insurgencies and Military Operations in the Sahel (2012–Present)
+
+The Sahel is a large geographical region in Africa located south of the Sahara Desert. Countries such as Mali, Burkina Faso, and Niger have experienced prolonged instability caused by armed insurgencies, political crises, and weak state institutions.
+
+The conflict in Mali escalated in 2012, when Tuareg separatist groups and Islamist militant organizations took control of large areas in the north.
+
+### International Military Intervention in Mali
+
+In January 2013, France launched **Operation Serval** to stop militant groups from advancing toward southern Mali and the capital, Bamako.
+
+French forces, supported by regional partners, carried out military operations that helped government forces regain control of several important cities.
+
+In 2014, France replaced Operation Serval with **Operation Barkhane**, a broader counterterrorism mission covering several countries in the Sahel.
+
+The United Nations also established the MINUSMA peacekeeping mission in Mali in 2013. The mission ended in December 2023 following a request by Mali's transitional authorities.
+
+### Expansion of Regional Insurgencies
+
+Armed groups expanded their activities across Mali, Burkina Faso, and Niger. Organizations affiliated with Al-Qaeda and the Islamic State became increasingly active in the region.
+
+Military coups in Mali, Burkina Faso, and Niger changed the political situation and weakened security cooperation with several Western countries.
+
+By 2026, the region continued to face serious instability. Insurgent groups remained active, while military governments increasingly relied on regional cooperation and Russian security assistance.
+
+The Sahel conflicts illustrate the difficulties of counterinsurgency operations in large territories where governments struggle to maintain control and provide basic services.
+
+## 6. Modern Military Interventions and Regional Security
+
+Regional conflicts since 2011 have demonstrated that modern military interventions rarely involve only two opposing national armies.
+
+International powers increasingly support local forces through weapons deliveries, intelligence, training, air operations, and logistical assistance.
+
+Several important developments have shaped modern military interventions:
+
+- **Air Power:** Modern fighter aircraft, helicopters, and precision-guided weapons are widely used in military operations.
+- **Unmanned Aerial Vehicles:** Drones are used for reconnaissance, surveillance, targeting, and combat missions.
+- **Special Operations Forces:** Specialized military units conduct reconnaissance, counterterrorism missions, and operations against high-value targets.
+- **Proxy Warfare:** International powers support local armed groups to influence conflicts without deploying large conventional armies.
+- **Cyber and Information Warfare:** Digital operations, propaganda, and information campaigns have become important elements of modern conflicts.
+- **Maritime Security:** Naval forces increasingly protect international shipping routes and respond to threats against commercial vessels.
+
+## Conclusion
+
+Regional wars and military interventions since 2011 have reshaped the political and military landscape of several parts of the world.
+
+The conflicts in Libya, Syria, Yemen, Nagorno-Karabakh, and the Sahel demonstrate the complexity of modern warfare, where local disputes can develop into international crises involving multiple states and armed organizations.
+
+Although some major military campaigns have ended, many regions continue to experience political instability, humanitarian challenges, and unresolved security issues.
+
+These conflicts have also accelerated the development and use of modern military technology, particularly drones, precision weapons, surveillance systems, and advanced intelligence capabilities.</div>
+          </section>
+
+          <section class="war-article-section" id="impact">
+            <h2><span>04</span> Modern Warfare &amp; Current Conflicts</h2>
+            <div class="war-writing-area"># Modern Warfare & Current Conflicts (2014–Present)
+
+## Introduction
+
+Modern warfare has changed significantly during the twenty-first century. Advances in technology, communication systems, unmanned aircraft, precision-guided weapons, and artificial intelligence have transformed the way military operations are planned and conducted.
+
+Contemporary conflicts often combine conventional military operations with cyberattacks, electronic warfare, intelligence operations, propaganda, and economic pressure. Modern armed forces increasingly depend on satellite navigation, real-time surveillance, advanced communication networks, and unmanned systems.
+
+Several conflicts have demonstrated these changes, particularly the war in Ukraine, the Israel–Hamas war, and the civil war in Sudan. Together, they provide important examples of how military technology and traditional combat operations interact in modern conflicts.
+
+## 1. The Russo-Ukrainian War (2014–Present)
+
+The Russo-Ukrainian War began in 2014 following Russia's annexation of Crimea and the outbreak of armed conflict in eastern Ukraine.
+
+Fighting developed between Ukrainian government forces and Russian-backed separatist groups in the Donbas region. Despite several ceasefire agreements, the conflict continued for years.
+
+### The Full-Scale Russian Invasion (2022)
+
+On February 24, 2022, Russia launched a full-scale invasion of Ukraine. Russian forces attacked from several directions, including northern, eastern, and southern Ukraine.
+
+The initial offensive targeted major cities, including Kyiv, Kharkiv, and Kherson. Ukrainian forces resisted the invasion, preventing Russia from capturing Kyiv and forcing Russian troops to withdraw from northern Ukraine in the spring of 2022.
+
+Fighting subsequently became concentrated in eastern and southern regions, particularly around Donetsk, Luhansk, Zaporizhzhia, and Kherson.
+
+### Modern Military Technology in Ukraine
+
+The war has become one of the most important examples of modern high-intensity warfare.
+
+Both sides have used a wide range of military systems:
+
+- **Unmanned Aerial Vehicles (UAVs):** Drones are used for reconnaissance, surveillance, artillery correction, and direct attacks.
+- **FPV Drones:** Small first-person-view drones have become widely used against vehicles, defensive positions, and individual targets.
+- **Long-Range Missiles:** Cruise and ballistic missiles are used to attack military installations and infrastructure.
+- **Electronic Warfare:** Systems designed to interfere with communications, satellite navigation, and drone control play an important role.
+- **Satellite Intelligence:** Satellite imagery and commercial communication networks help monitor military movements and coordinate operations.
+- **Armored Vehicles:** Tanks, infantry fighting vehicles, and armored personnel carriers remain important, although their use is increasingly affected by drones and precision weapons.
+
+The conflict has also demonstrated the importance of industrial production, ammunition supplies, logistics, air defense, and international military assistance.
+
+By November 2026, the war remained active. Russia continued to occupy parts of Ukrainian territory, while Ukraine carried out defensive operations and long-range strikes against Russian military and energy infrastructure. Diplomatic efforts had not produced a lasting peace agreement.
+
+## 2. The Israel–Hamas War (2023–Present)
+
+The latest major escalation of the Israeli–Palestinian conflict began on October 7, 2023, when Hamas and other Palestinian armed groups launched an attack on southern Israel.
+
+The attack killed approximately 1,200 people and resulted in the capture of 251 hostages. Israel responded by launching a large-scale military campaign in the Gaza Strip.
+
+### Military Operations in Gaza
+
+Israeli forces conducted extensive airstrikes and later launched ground operations throughout Gaza.
+
+The campaign involved:
+- Airstrikes against military targets and infrastructure.
+- Ground operations by infantry and armored units.
+- Urban combat in densely populated areas.
+- Tunnel detection and destruction operations.
+- Intelligence, surveillance, and reconnaissance missions.
+
+Hamas and other armed groups used underground tunnels, concealed positions, improvised explosive devices, and small arms to resist Israeli forces.
+
+The fighting caused widespread destruction and a severe humanitarian crisis. Large numbers of civilians were displaced, while hospitals, residential buildings, and essential infrastructure suffered extensive damage.
+
+### Regional Consequences
+
+The war also contributed to increased tensions across the Middle East.
+
+Armed groups in Lebanon, Yemen, Iraq, and Syria became involved in related military confrontations at different stages. Attacks against commercial shipping in the Red Sea also raised international concerns about maritime security.
+
+A ceasefire agreement took effect on October 10, 2025. It secured the release of the remaining Israeli hostages and reduced the scale of major military operations. However, the agreement did not resolve the central political and security disputes.
+
+By 2026, the ceasefire remained fragile, with continued violence, disputes over disarmament, and major challenges surrounding Gaza's future administration and reconstruction.
+
+## 3. The Sudanese Civil War (2023–Present)
+
+The Sudanese Civil War began on April 15, 2023, following a power struggle between two major armed organizations:
+
+- **Sudanese Armed Forces (SAF):** The country's regular military, led by General Abdel Fattah al-Burhan.
+- **Rapid Support Forces (RSF):** A powerful paramilitary organization led by Mohamed Hamdan Dagalo, also known as Hemedti.
+
+The conflict emerged from disagreements over political authority and the proposed integration of the RSF into the national armed forces.
+
+### Major Developments
+
+Fighting initially spread through the capital, Khartoum, and other major cities. Both sides used infantry, armored vehicles, artillery, and air power.
+
+The conflict later expanded into Darfur and the Kordofan regions, where fighting caused extensive destruction and civilian displacement.
+
+The Sudanese Armed Forces regained control of Khartoum in 2025, while the RSF maintained a strong presence in parts of western Sudan.
+
+### Humanitarian Consequences
+
+The war has produced one of the world's most severe humanitarian crises.
+
+Millions of people have been displaced, and large parts of the country's infrastructure have been damaged. Food shortages, disease outbreaks, limited medical services, and restricted humanitarian access have affected civilians across the country.
+
+By late 2026, fighting continued in several regions, particularly Darfur, Kordofan, and Blue Nile. Both sides increasingly relied on drones and airstrikes, demonstrating how relatively inexpensive unmanned systems can influence a large-scale civil war.
+
+## 4. Unmanned Aerial Vehicles (Drones)
+
+One of the most important developments in modern warfare is the widespread use of unmanned aerial vehicles.
+
+Drones can perform military tasks without placing a pilot directly inside the aircraft. They range from small commercial-style quadcopters to large military aircraft capable of long-range surveillance and combat operations.
+
+### Main Types of Military Drones
+
+**Reconnaissance Drones**
+
+Used to observe enemy positions, monitor movements, collect intelligence, and provide information to commanders.
+
+**Combat Drones**
+
+Designed to carry weapons and attack military targets. Some systems can remain airborne for extended periods before engaging a target.
+
+**FPV Drones**
+
+Small remotely controlled aircraft that transmit live video to an operator. They have become widely used in modern battlefields because of their relatively low cost and flexibility.
+
+**Loitering Munitions**
+
+Weapons that remain airborne while searching for a target before striking it. They combine characteristics of drones and guided missiles.
+
+### Advantages and Limitations
+
+Drones can reduce risks to personnel, provide continuous surveillance, and offer relatively inexpensive alternatives to some traditional aircraft.
+
+However, they are vulnerable to electronic jamming, air-defense systems, weather conditions, and limitations in communication or battery endurance.
+
+Their growing use has encouraged military forces to develop new counter-drone technologies and defensive systems.
+
+## 5. Cyber Warfare and Electronic Warfare
+
+Modern conflicts are no longer limited to physical battlefields. Computer networks, communication systems, satellites, and digital infrastructure have become important military targets.
+
+### Cyber Warfare
+
+Cyber warfare involves digital operations intended to disrupt, damage, manipulate, or gain access to computer systems and networks.
+
+Military-related cyber operations may target:
+- Government networks.
+- Military communication systems.
+- Energy infrastructure.
+- Transportation networks.
+- Financial institutions.
+- Command and control systems.
+
+Cyber operations can support conventional military campaigns by disrupting an opponent's ability to communicate, organize, and respond.
+
+### Electronic Warfare
+
+Electronic warfare involves the use of electromagnetic energy to protect friendly systems or interfere with enemy equipment.
+
+Its main areas include:
+
+- **Electronic Attack:** Disrupting or degrading enemy radar, communications, and navigation systems.
+- **Electronic Protection:** Protecting friendly equipment from jamming and other forms of electronic interference.
+- **Electronic Support:** Detecting and analyzing electromagnetic signals to gather intelligence.
+
+Electronic warfare has become particularly important in conflicts where both sides depend heavily on drones, satellite navigation, and wireless communications.
+
+## 6. Artificial Intelligence and Autonomous Systems
+
+Artificial intelligence is becoming increasingly important in modern military research and development.
+
+AI-based systems can process large quantities of information, identify patterns, analyze surveillance data, and assist military personnel in decision-making.
+
+Potential military applications include:
+
+- Analysis of satellite and aerial imagery.
+- Automated target recognition.
+- Intelligence processing.
+- Predictive maintenance of military equipment.
+- Logistics and supply management.
+- Autonomous navigation and robotics.
+- Decision-support systems for commanders.
+
+Autonomous systems can perform certain tasks with limited human intervention. However, the use of AI in weapons raises serious questions about accountability, reliability, human control, and compliance with international humanitarian law.
+
+AI does not independently replace military commanders. Human judgment, legal responsibility, and operational oversight remain essential elements of military decision-making.
+
+## 7. Precision Weapons and Modern Air Defense
+
+Modern military forces increasingly rely on weapons designed to strike specific targets with a high degree of accuracy.
+
+### Precision-Guided Weapons
+
+Precision-guided weapons use guidance systems to improve accuracy during flight.
+
+Examples include:
+- Guided aerial bombs.
+- Cruise missiles.
+- Ballistic missiles.
+- Anti-tank guided missiles.
+- Laser-guided weapons.
+- GPS-guided munitions.
+
+These systems allow military forces to engage targets at considerable distances and reduce dependence on unguided ammunition.
+
+### Air Defense Systems
+
+Air defense has become essential because of the growing use of aircraft, missiles, and drones.
+
+Modern air defense systems are designed to detect, track, and intercept incoming threats.
+
+They may include:
+- Short-range air defense systems.
+- Medium-range surface-to-air missile systems.
+- Long-range missile defense systems.
+- Radar networks.
+- Mobile anti-aircraft guns.
+- Counter-drone systems.
+
+The protection of military bases, cities, airports, industrial facilities, and critical infrastructure depends increasingly on layered air defense networks.
+
+## 8. Space Warfare and Satellite Technology
+
+Space has become an important part of modern military operations.
+
+Military forces depend on satellites for navigation, communication, weather forecasting, missile warning, and intelligence gathering.
+
+### Military Applications of Satellites
+
+**Navigation:** Satellite navigation systems help aircraft, ships, and ground forces determine their positions.
+
+**Communication:** Military satellites provide communication links across large distances and between different operational areas.
+
+**Surveillance:** Imaging satellites monitor military installations, troop movements, airfields, and naval activity.
+
+**Early Warning:** Specialized satellites can detect the launch of certain ballistic missiles and provide early warning information.
+
+The growing dependence on space-based systems has also created new security concerns. Disruptions to satellite communications, navigation, and other space services can affect military operations on Earth.
+
+## 9. The Future of Modern Warfare
+
+Military technology is continuing to develop, and future conflicts are likely to combine traditional military capabilities with increasingly advanced digital and autonomous systems.
+
+Several trends are expected to influence future battlefields:
+
+- Greater use of unmanned aerial, ground, and naval systems.
+- Increased integration of artificial intelligence into military planning.
+- More advanced electronic warfare and counter-drone capabilities.
+- Wider use of satellite-based intelligence and communication.
+- Development of hypersonic and other advanced missile systems.
+- Greater importance of cyber defense and critical infrastructure protection.
+- Continued development of precision-guided weapons.
+
+Despite technological progress, traditional military factors remain important. Trained personnel, leadership, logistics, discipline, industrial capacity, and strategic planning continue to influence the outcome of conflicts.
+
+## Conclusion
+
+Modern warfare is defined by the combination of conventional military power and advanced technology.
+
+The wars in Ukraine, Gaza, and Sudan have demonstrated that drones, precision weapons, electronic warfare, and digital systems can significantly influence military operations. At the same time, they have shown that technology alone cannot guarantee victory.
+
+The ability to adapt, maintain supply lines, protect infrastructure, gather intelligence, and coordinate military forces remains essential.
+
+As technology continues to evolve, armed forces around the world are preparing for a future in which land, air, sea, space, and cyberspace are increasingly connected parts of the same military environment.</div>
+          </section>
+        </div>
+
+        <aside class="war-article-nav" aria-label="Article sections">
+          <h3>On This Page</h3>
+          <ol>
+            <li><a href="#overview">Post Cold War Conflicts</a></li>
+            <li><a href="#conflicts">War on Terror</a></li>
+            <li><a href="#forces">Regional Wars &amp; Military Interventions</a></li>
+            <li><a href="#impact">Modern Warfare &amp; Current Conflicts</a></li>
+          </ol>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Military Base home">
+          <span class="logo-placeholder" aria-hidden="true"></span>
+          <span class="brand-name">MILITARY <span>BASE</span></span>
+        </a>
+        <p>A thoughtful reference to the forces, equipment, and stories that shape our world.</p>
+      </div>
+      <div class="footer-column">
+        <h2>EXPLORE</h2>
+        <a href="world-militaries.html">World Militaries</a>
+        <a href="military-units.html">Military Units</a>
+        <a href="military-ranks.html">Military Ranks</a>
+        <a href="weapons.html">Weapons</a>
+        <a href="hunting.html">Hunting</a>
+      </div>
+      <div class="footer-column">
+        <h2>DISCOVER</h2>
+        <a href="military-aviation.html">Military Aviation</a>
+        <a href="land-systems.html">Land Systems</a>
+        <a href="naval-forces.html">Naval Forces</a>
+        <a href="military-history.html">Military History</a>
+        <a href="../index.html#categories">All Categories</a>
+      </div>
+      <div class="footer-column footer-about">
+        <h2>ABOUT MILITARY BASE</h2>
+        <p>Building an accessible, well-organized encyclopedia of military and outdoor knowledge.</p>
+        <a href="mailto:contact@militarybase.example">Contact: contact@militarybase.example</a>
+      </div>
+    </div>
+    <div class="footer-bottom page-width">
+      <span>© 2026 MILITARY BASE. ALL RIGHTS RESERVED.</span>
+      <span>INFORMATION. CONTEXT. UNDERSTANDING.</span>
+      <a href="#main-content">BACK TO TOP ↑</a>
+    </div>
+  </footer>
+  <script>
+    document.querySelectorAll(".war-writing-area").forEach((area) => {
+      const lines = area.textContent.replace(/\r/g, "").split("\n");
+      const content = document.createDocumentFragment();
+      let paragraph = [];
+      let list = null;
+      let skippedMainHeading = false;
+
+      const appendInlineText = (element, text) => {
+        const parts = text.split(/(\*\*[^*]+\*\*)/g);
+        parts.forEach((part) => {
+          if (part.startsWith("**") && part.endsWith("**")) {
+            const strong = document.createElement("strong");
+            strong.textContent = part.slice(2, -2);
+            element.append(strong);
+          } else if (part) {
+            element.append(document.createTextNode(part));
+          }
+        });
+      };
+
+      const flushParagraph = () => {
+        if (!paragraph.length) return;
+        const element = document.createElement("p");
+        appendInlineText(element, paragraph.join(" "));
+        content.append(element);
+        paragraph = [];
+      };
+
+      const closeList = () => {
+        if (!list) return;
+        content.append(list);
+        list = null;
+      };
+
+      lines.forEach((rawLine) => {
+        const line = rawLine.trim();
+        if (!line) {
+          flushParagraph();
+          closeList();
+          return;
+        }
+
+        const heading = line.match(/^(#{1,3})\s+(.+)$/);
+        if (heading) {
+          flushParagraph();
+          closeList();
+          if (heading[1] === "#" && !skippedMainHeading) {
+            skippedMainHeading = true;
+            return;
+          }
+          const element = document.createElement(heading[1].length === 3 ? "h5" : "h4");
+          appendInlineText(element, heading[2]);
+          content.append(element);
+          return;
+        }
+
+        const item = line.match(/^[-*]\s+(.+)$/);
+        if (item) {
+          flushParagraph();
+          if (!list) list = document.createElement("ul");
+          const element = document.createElement("li");
+          appendInlineText(element, item[1]);
+          list.append(element);
+          return;
+        }
+
+        closeList();
+        if (/^\d+\.\s+[A-Z][^.!?]{0,60}$/.test(line)) {
+          flushParagraph();
+          const element = document.createElement("h4");
+          appendInlineText(element, line.replace(/^\d+\.\s+/, ""));
+          content.append(element);
+          return;
+        }
+        paragraph.push(line);
+      });
+
+      flushParagraph();
+      closeList();
+      area.replaceChildren(content);
+      area.classList.add("is-formatted");
+    });
+  </script>
+  <script src="../language.js" defer></script>
+</body>
+</html>

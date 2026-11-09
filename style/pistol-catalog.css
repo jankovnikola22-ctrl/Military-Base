@@ -1,0 +1,513 @@
+.pistol-catalog-section {
+  padding-block: 74px 100px;
+}
+
+.catalog-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 35px;
+  margin-bottom: 27px;
+}
+
+.catalog-heading .eyebrow {
+  margin-bottom: 12px;
+}
+
+.catalog-heading h2,
+.pistol-detail-heading h2 {
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: clamp(43px, 5vw, 61px);
+  font-weight: 700;
+  line-height: 0.98;
+}
+
+.catalog-heading h2 span,
+.pistol-detail-heading h2 span {
+  color: var(--olive-bright);
+}
+
+.catalog-heading > p {
+  max-width: 340px;
+  margin: 0 0 3px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.catalog-tools {
+  display: grid;
+  grid-template-columns: minmax(230px, 1fr) 2fr;
+  gap: 16px 22px;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: linear-gradient(110deg, rgba(32, 37, 31, 0.85), rgba(25, 29, 25, 0.92));
+}
+
+.catalog-search {
+  display: flex;
+  min-width: 0;
+  height: 45px;
+  align-items: center;
+  gap: 11px;
+  padding-inline: 12px;
+  border: 1px solid rgba(235, 236, 220, 0.16);
+  background: rgba(12, 15, 12, 0.42);
+  color: var(--olive-bright);
+}
+
+.catalog-search svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 1.6;
+}
+
+.catalog-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--white);
+  font-size: 11px;
+}
+
+.catalog-search input::placeholder {
+  color: #969a8f;
+}
+
+.catalog-search:focus-within {
+  border-color: rgba(195, 195, 148, 0.62);
+}
+
+.catalog-filters {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.catalog-filters label {
+  display: grid;
+  gap: 4px;
+  color: #aeb0a6;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.catalog-filters select {
+  width: 100%;
+  min-width: 0;
+  height: 35px;
+  padding: 0 8px;
+  border: 1px solid rgba(235, 236, 220, 0.14);
+  border-radius: 0;
+  background: #171b17;
+  color: #e2e2d9;
+  font-family: var(--body-font);
+  font-size: 9px;
+}
+
+.catalog-tools-note {
+  grid-column: 1 / -1;
+  margin: -7px 0 0;
+  color: #82867b;
+  font-size: 8px;
+  letter-spacing: 0.07em;
+}
+
+.pistol-list {
+  display: grid;
+  gap: 16px;
+}
+
+.pistol-card {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.78fr) minmax(0, 1.5fr);
+  min-height: 278px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: linear-gradient(115deg, rgba(32, 37, 31, 0.76), rgba(22, 26, 22, 0.97) 48%);
+  transition: border-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
+}
+
+.pistol-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(195, 195, 148, 0.38);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pistol-image-placeholder {
+  position: relative;
+  display: flex;
+  min-height: 278px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  overflow: hidden;
+  border-right: 1px solid var(--line);
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(166, 168, 120, 0.13), transparent 62%),
+    repeating-linear-gradient(135deg, rgba(238, 239, 222, 0.025) 0 1px, transparent 1px 14px),
+    #171b17;
+  color: #9da18f;
+}
+
+.pistol-image-placeholder::before,
+.pistol-image-placeholder::after {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border-color: rgba(195, 195, 148, 0.2);
+  border-style: solid;
+  content: "";
+}
+
+.pistol-image-placeholder::before {
+  top: 13px;
+  left: 13px;
+  border-width: 1px 0 0 1px;
+}
+
+.pistol-image-placeholder::after {
+  right: 13px;
+  bottom: 13px;
+  border-width: 0 1px 1px 0;
+}
+
+.pistol-image-placeholder picture {
+  position: absolute;
+  inset: 0;
+}
+
+.pistol-image-placeholder picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 18px;
+}
+
+.placeholder-cross {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(195, 195, 148, 0.52);
+  transform: rotate(45deg);
+}
+
+.placeholder-cross::before,
+.placeholder-cross::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: rgba(195, 195, 148, 0.52);
+  content: "";
+  transform: translate(-50%, -50%);
+}
+
+.placeholder-cross::before {
+  width: 1px;
+  height: 16px;
+}
+
+.placeholder-cross::after {
+  width: 16px;
+  height: 1px;
+}
+
+.placeholder-label {
+  color: var(--olive-bright);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.pistol-image-placeholder code {
+  max-width: calc(100% - 25px);
+  color: #777d70;
+  font-family: var(--body-font);
+  font-size: 8px;
+  overflow-wrap: anywhere;
+}
+
+.pistol-card-content {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 22px 26px;
+}
+
+.pistol-card-topline {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pistol-category {
+  color: var(--olive-bright);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+
+.pistol-index {
+  color: var(--gold);
+  font-family: var(--heading-font);
+  font-size: 13px;
+}
+
+.pistol-card-content h3 {
+  margin: 8px 0 2px;
+  font-family: var(--heading-font);
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.pistol-card-summary {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.pistol-spec-list {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 11px 15px;
+  margin: 0 0 16px;
+}
+
+.pistol-spec-list div {
+  min-width: 0;
+}
+
+.pistol-spec-list dt {
+  margin-bottom: 2px;
+  color: #858a7d;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pistol-spec-list dd {
+  margin: 0;
+  color: #e0e0d6;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.pistol-details-link {
+  min-height: 38px;
+  gap: 15px;
+  margin-top: auto;
+  padding-inline: 15px;
+  font-size: 9px;
+}
+
+.pistol-detail-section {
+  padding-block: 58px 96px;
+}
+
+.pistol-detail-heading {
+  margin-bottom: 26px;
+}
+
+.pistol-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 17px;
+  color: #969a8f;
+  font-size: 9px;
+}
+
+.pistol-breadcrumbs a {
+  color: var(--olive-bright);
+}
+
+.pistol-detail-heading h2 {
+  font-size: clamp(46px, 6vw, 72px);
+}
+
+.pistol-detail-heading > p {
+  max-width: 660px;
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.pistol-detail-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.pistol-detail-image {
+  min-height: 430px;
+}
+
+.pistol-detail-info {
+  padding: 25px;
+  border: 1px solid var(--line);
+  background: linear-gradient(145deg, rgba(32, 37, 31, 0.86), rgba(25, 29, 25, 0.94));
+}
+
+.pistol-detail-info h3,
+.pistol-detail-copy h3 {
+  margin: 0 0 18px;
+  font-family: var(--heading-font);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.pistol-detail-specs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+}
+
+.pistol-detail-specs div {
+  padding: 13px 10px 13px 0;
+  border-top: 1px solid var(--line);
+}
+
+.pistol-detail-specs dt {
+  color: #858a7d;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pistol-detail-specs dd {
+  margin: 4px 0 0;
+  color: var(--white);
+  font-size: 11px;
+}
+
+.pistol-detail-copy {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.pistol-detail-copy section {
+  min-height: 150px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: rgba(25, 29, 25, 0.7);
+}
+
+.pistol-detail-copy h3 {
+  margin-bottom: 8px;
+  font-size: 23px;
+}
+
+.pistol-detail-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.75;
+}
+
+@media (max-width: 900px) {
+  .catalog-tools {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-tools-note {
+    margin-top: -5px;
+  }
+
+  .pistol-card {
+    grid-template-columns: minmax(210px, 0.72fr) minmax(0, 1.3fr);
+  }
+
+  .pistol-card-content {
+    padding: 20px;
+  }
+
+  .pistol-spec-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .pistol-catalog-section {
+    padding-block: 55px 72px;
+  }
+
+  .catalog-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .catalog-heading h2 {
+    font-size: 43px;
+  }
+
+  .catalog-tools {
+    padding: 13px;
+  }
+
+  .catalog-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pistol-card {
+    grid-template-columns: 1fr;
+  }
+
+  .pistol-image-placeholder {
+    min-height: 205px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .pistol-card-content {
+    min-height: 270px;
+    padding: 19px;
+  }
+
+  .pistol-card-content h3 {
+    font-size: 32px;
+  }
+
+  .pistol-detail-section {
+    padding-block: 42px 68px;
+  }
+
+  .pistol-detail-layout,
+  .pistol-detail-copy {
+    grid-template-columns: 1fr;
+  }
+
+  .pistol-detail-image {
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 380px) {
+  .pistol-spec-list,
+  .pistol-detail-specs {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="World War II article page.">
+  <meta name="theme-color" content="#111411">
+  <title>World War II | MILITARY BASE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .section-hero--ww2 {
+      background-image: url("../photos/home-page-photos/ww2.jpg");
+      background-position: center 43%;
+    }
+
+    .war-article { padding-block: 42px 100px; }
+    .war-breadcrumbs {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 32px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .war-breadcrumbs a { color: var(--olive-bright); }
+    .war-article-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 260px;
+      align-items: start;
+      gap: 26px;
+    }
+    .war-article-content { display: grid; gap: 20px; }
+    .war-article-section,
+    .war-article-nav {
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, rgba(32, 37, 31, 0.86), rgba(25, 29, 25, 0.94));
+    }
+    .war-article-section {
+      padding: clamp(22px, 3.2vw, 36px);
+      border-left: 2px solid rgba(195, 195, 148, 0.55);
+      scroll-margin-top: 100px;
+    }
+    .war-article-section h2,
+    .war-article-nav h3 {
+      margin: 0;
+      font-family: var(--heading-font);
+      font-size: 27px;
+      font-weight: 600;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+    .war-article-section h2 {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+      font-size: clamp(25px, 3vw, 32px);
+    }
+    .war-article-section h2 span {
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+    }
+    .war-writing-area {
+      min-height: 200px;
+      margin-top: 20px;
+      color: #d3d4ca;
+      font-size: 15px;
+      line-height: 1.85;
+      white-space: pre-line;
+    }
+    .war-writing-area.is-formatted { white-space: normal; }
+    .war-writing-area p { max-width: 76ch; margin: 0 0 1.15em; }
+    .war-writing-area p:last-child,
+    .war-writing-area ul:last-child { margin-bottom: 0; }
+    .war-writing-area h4 {
+      margin: 1.8em 0 0.55em;
+      color: var(--olive-bright);
+      font-family: var(--heading-font);
+      font-size: 23px;
+      font-weight: 600;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+    .war-writing-area h4:first-child { margin-top: 0; }
+    .war-writing-area h5 {
+      margin: 1.35em 0 0.4em;
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .war-writing-area ul {
+      display: grid;
+      gap: 9px;
+      max-width: 76ch;
+      margin: 0 0 1.2em;
+      padding-left: 22px;
+    }
+    .war-writing-area li { padding-left: 3px; }
+    .war-writing-area li::marker { color: var(--gold); }
+    .war-writing-area strong { color: var(--white); font-weight: 700; }
+    .war-article-nav {
+      position: sticky;
+      top: 100px;
+      padding: 22px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+    .war-article-nav h3 {
+      margin-bottom: 15px;
+      color: var(--olive-bright);
+      font-size: 21px;
+    }
+    .war-article-nav ol {
+      display: grid;
+      gap: 4px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .war-article-nav a {
+      display: block;
+      padding: 10px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      transition: color 180ms ease;
+    }
+    .war-article-nav a:hover,
+    .war-article-nav a:focus-visible { color: var(--olive-bright); }
+    @media (max-width: 760px) {
+      .war-article { padding-block: 42px 72px; }
+      .war-article-layout { grid-template-columns: 1fr; }
+      .war-article-nav { position: static; grid-row: 1; }
+      .war-article-section { padding: 22px 18px; }
+      .war-writing-area { font-size: 14px; line-height: 1.8; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html" aria-label="Military Base home">
+        <span class="logo-placeholder" aria-hidden="true"></span>
+        <span class="brand-name">MILITARY <span>BASE</span></span>
+      </a>
+      <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation">
+      <label class="menu-button" for="menu-toggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-home" href="../index.html">Home</a>
+        <a href="world-militaries.html">World Militaries</a>
+        <a href="military-units.html">Military Units</a>
+        <a href="military-ranks.html">Military Ranks</a>
+        <a href="weapons.html">Weapons</a>
+        <a href="military-aviation.html">Military Aviation</a>
+        <a href="land-systems.html">Land Systems</a>
+        <a href="naval-forces.html">Naval Forces</a>
+        <a href="hunting.html">Hunting</a>
+        <a href="military-history.html">Military History</a>
+      </nav>
+      <a class="header-search" href="military-history.html" aria-label="Back to Military History">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="10.8" cy="10.8" r="6.8"></circle>
+          <path d="m16 16 5 5"></path>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section-hero section-hero--ww2">
+      <div class="page-width section-hero-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> MILITARY HISTORY</p>
+        <h1>WORLD WAR <span>II</span></h1>
+        <a class="text-link" href="military-history.html">← Back to Military History</a>
+      </div>
+    </section>
+
+    <article class="war-article page-width">
+      <nav class="war-breadcrumbs" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="military-history.html">Military History</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">World War II</span>
+      </nav>
+
+      <div class="war-article-layout">
+        <div class="war-article-content">
+          <section class="war-article-section" id="overview">
+            <h2><span>01</span> Causes of World War II</h2>
+            <div class="war-writing-area"># Causes of World War II (1939)
+
+World War II began on September 1, 1939, when Nazi Germany invaded Poland. It became the largest and deadliest military conflict in human history, involving dozens of countries across Europe, Asia, Africa, and the Pacific.
+
+The outbreak of the war was the result of several interconnected political, economic, and military factors. The harsh conditions imposed on Germany after World War I, the rise of aggressive dictatorships, territorial expansion, nationalism, and the failure of international diplomacy all contributed to the beginning of the conflict.
+
+## 1. The Treaty of Versailles (1919)
+
+The Treaty of Versailles was signed on June 28, 1919, following the end of World War I. It imposed severe conditions on Germany, including territorial losses, military restrictions, and financial reparations.
+
+Germany was required to:
+- Accept responsibility under the treaty's war guilt clause.
+- Pay substantial financial reparations.
+- Reduce its army to 100,000 soldiers.
+- Abandon its air force and limit its navy.
+- Give up all overseas colonies.
+- Accept the demilitarization of the Rhineland.
+
+Many Germans considered the treaty humiliating and unjust. This created resentment and political instability, which Adolf Hitler and the Nazi Party later used to gain public support.
+
+## 2. The Rise of Fascism and Nazism
+
+During the 1920s and 1930s, authoritarian and extremist political movements gained influence in several European countries.
+
+In Italy, Benito Mussolini established a fascist dictatorship in 1922. His government promoted nationalism, militarism, territorial expansion, and strict state control.
+
+In Germany, Adolf Hitler and the Nazi Party came to power in 1933. The Nazi regime promoted extreme nationalism, racial ideology, antisemitism, and the idea of German territorial expansion.
+
+These governments rejected many principles of the post-World War I international order and pursued aggressive foreign policies.
+
+## 3. The Great Depression (1929)
+
+The Great Depression began in 1929 and caused a worldwide economic crisis. Unemployment increased, businesses collapsed, and living conditions deteriorated in many countries.
+
+Germany was particularly affected due to its economic dependence on international loans and its existing financial difficulties.
+
+Economic hardship weakened democratic governments and increased support for extremist political parties. The Nazi Party used public dissatisfaction and promises of economic recovery to strengthen its position.
+
+## 4. German Expansionism and Rearmament
+
+After Adolf Hitler became Chancellor of Germany in 1933, the Nazi government began rebuilding the country's military forces in violation of the Treaty of Versailles.
+
+Major events included:
+
+- 1935 – Germany reintroduced compulsory military service and openly expanded its armed forces.
+- 1936 – German troops entered the demilitarized Rhineland.
+- 1938 – Germany annexed Austria in the Anschluss.
+- 1938 – Germany gained the Sudetenland following the Munich Agreement.
+- March 1939 – Germany occupied the remaining Czech lands.
+
+These actions demonstrated Hitler's ambition to expand German territory and establish greater control over Europe.
+
+## 5. Japanese Expansionism
+
+Japan pursued an aggressive policy of territorial expansion in Asia during the 1930s.
+
+The Japanese military sought access to natural resources, strategic territories, and greater regional influence.
+
+Important events included:
+
+- 1931 – Japan invaded Manchuria in northeastern China.
+- 1937 – Japan launched a full-scale invasion of China, beginning the Second Sino-Japanese War.
+- 1937 – The Nanjing Massacre occurred during the Japanese occupation of the Chinese city.
+- 1940 – Japan joined Germany and Italy through the Tripartite Pact.
+
+Japanese expansionism became a major factor in the development of World War II in Asia and the Pacific.
+
+## 6. The Failure of the League of Nations
+
+The League of Nations was established after World War I to maintain international peace and prevent future wars.
+
+However, the organization lacked an effective military force and struggled to stop aggressive countries.
+
+Its failures became increasingly clear during several international crises:
+
+- Japanese invasion of Manchuria (1931).
+- Italian invasion of Ethiopia (1935).
+- German rearmament and territorial expansion during the 1930s.
+
+The League of Nations was unable to enforce its decisions effectively, allowing aggressive governments to continue expanding their influence.
+
+## 7. The Policy of Appeasement
+
+During the 1930s, Britain and France followed a policy known as appeasement. This involved making diplomatic concessions to Hitler in an attempt to prevent another major European war.
+
+The most significant example was the Munich Agreement of September 1938.
+
+Britain and France agreed to allow Germany to annex the Sudetenland, a region of Czechoslovakia with a large ethnic German population.
+
+British Prime Minister Neville Chamberlain believed the agreement would preserve peace. However, Hitler continued his expansionist policies and occupied the remaining Czech lands in March 1939.
+
+The policy of appeasement failed to prevent the outbreak of war.
+
+## 8. The Nazi-Soviet Non-Aggression Pact (1939)
+
+On August 23, 1939, Germany and the Soviet Union signed the Molotov-Ribbentrop Pact, a non-aggression agreement between the two countries.
+
+The agreement included secret protocols that divided parts of Eastern Europe into German and Soviet spheres of influence.
+
+Poland was particularly affected, as both powers planned to divide its territory between them.
+
+The pact allowed Hitler to prepare for the invasion of Poland without immediately facing a war with the Soviet Union.
+
+## 9. The Invasion of Poland (September 1, 1939)
+
+On September 1, 1939, German forces invaded Poland from the west, using coordinated attacks involving tanks, infantry, artillery, and aircraft.
+
+The invasion marked the beginning of World War II in Europe.
+
+On September 3, 1939, Britain and France declared war on Germany after it failed to withdraw its forces from Poland.
+
+On September 17, the Soviet Union invaded eastern Poland in accordance with the secret arrangements of the Nazi-Soviet Pact.
+
+Poland was eventually occupied and divided between Germany and the Soviet Union.
+
+## Conclusion
+
+World War II was not caused by a single event but by years of political instability, economic crisis, military expansion, aggressive nationalism, and failed international diplomacy.
+
+The rise of Nazi Germany, Japanese expansionism, and the inability of international organizations and major powers to prevent aggression created the conditions for another global conflict.
+
+The German invasion of Poland on September 1, 1939, transformed these growing tensions into a full-scale war that would reshape the world.</div>
+          </section>
+
+          <section class="war-article-section" id="background">
+            <h2><span>02</span> Major Battles &amp; Campaigns</h2>
+            <div class="war-writing-area"># Major Battles & Campaigns of World War II (1939–1945)
+
+World War II was fought across multiple continents and oceans, involving millions of soldiers and thousands of military operations. The conflict was divided into several major theaters of war, including Europe, North Africa, the Eastern Front, and the Pacific.
+
+Military campaigns involved large-scale land battles, naval engagements, strategic bombing operations, and amphibious assaults. Many of these battles changed the direction of the war and determined the fate of entire nations.
+
+## 1. The Invasion of Poland (1939)
+
+On September 1, 1939, Nazi Germany invaded Poland, marking the beginning of World War II in Europe.
+
+German forces used coordinated attacks involving tanks, aircraft, artillery, and infantry. This approach became associated with Blitzkrieg, or lightning warfare.
+
+On September 17, the Soviet Union invaded eastern Poland. Polish forces were eventually defeated, and the country was divided between Germany and the Soviet Union.
+
+The invasion demonstrated the effectiveness of Germany's early military strategy and triggered declarations of war by Britain and France.
+
+## 2. The Western Front (1939–1945)
+
+The Western Front was one of the main theaters of World War II, where Germany fought against the Allied Powers.
+
+**Major Battles and Campaigns:**
+
+- Battle of France (1940) – German forces defeated France in a rapid campaign.
+- Battle of Britain (1940) – The Royal Air Force successfully defended Britain against German air attacks.
+- Operation Sea Lion (1940) – Germany's planned invasion of Britain, which was never carried out.
+- Normandy Landings – D-Day (June 6, 1944) – Allied forces landed in Normandy, opening a major Western Front against Germany.
+- Liberation of Paris (August 1944) – Allied and French forces liberated the French capital.
+- Battle of the Bulge (December 1944–January 1945) – Germany launched its final major offensive in the West.
+- Crossing of the Rhine (1945) – Allied forces crossed the Rhine River and advanced into Germany.
+
+## 3. The Eastern Front (1941–1945)
+
+The Eastern Front was the largest and deadliest land theater of World War II. It began when Germany launched Operation Barbarossa against the Soviet Union on June 22, 1941.
+
+The fighting involved enormous armies, extensive tank operations, and devastating casualties on both sides.
+
+**Major Battles and Campaigns:**
+
+- Operation Barbarossa (1941) – Germany launched a massive invasion of the Soviet Union.
+- Siege of Leningrad (1941–1944) – German and Finnish forces surrounded Leningrad for nearly 900 days.
+- Battle of Moscow (1941–1942) – Soviet forces stopped the German advance toward Moscow.
+- Battle of Stalingrad (1942–1943) – A decisive Soviet victory that marked a major turning point on the Eastern Front.
+- Battle of Kursk (1943) – One of the largest tank battles in history and a major Soviet victory.
+- Operation Bagration (1944) – A massive Soviet offensive that destroyed much of Germany's Army Group Centre.
+- Battle of Berlin (April–May 1945) – Soviet forces captured Berlin, leading to the collapse of Nazi Germany.
+
+## 4. The North African Campaign (1940–1943)
+
+North Africa was an important strategic region because of its location near the Mediterranean Sea and the Suez Canal.
+
+British and Commonwealth forces fought against Italian and German troops, including the German Afrika Korps commanded by Erwin Rommel.
+
+**Major Battles and Campaigns:**
+
+- Italian Invasion of Egypt (1940) – Italian forces advanced from Libya into Egypt.
+- Operation Compass (1940–1941) – British forces launched a successful offensive against Italian troops.
+- Siege of Tobruk (1941) – Allied forces defended the strategically important Libyan port.
+- Battle of Gazala (1942) – German and Italian forces achieved a major victory against British forces.
+- First and Second Battles of El Alamein (1942) – British forces stopped and then defeated the Axis advance in Egypt.
+- Operation Torch (1942) – American and British forces landed in French North Africa.
+- Tunisia Campaign (1942–1943) – Allied forces defeated the remaining Axis forces in North Africa.
+
+## 5. The Pacific War (1941–1945)
+
+The Pacific War was fought primarily between Japan and the Allied Powers, especially the United States, China, Britain, and Australia.
+
+Japan initially achieved major military successes, but American industrial strength and naval victories gradually changed the balance of power.
+
+**Major Battles and Campaigns:**
+
+- Attack on Pearl Harbor (December 7, 1941) – Japan attacked the American naval base in Hawaii, bringing the United States into the war.
+- Battle of the Coral Sea (1942) – A major naval battle that stopped a Japanese advance toward Port Moresby.
+- Battle of Midway (1942) – A decisive American naval victory that weakened Japanese carrier forces.
+- Guadalcanal Campaign (1942–1943) – Allied forces began a major offensive against Japanese positions.
+- Battle of Leyte Gulf (1944) – One of the largest naval battles in history.
+- Battle of Iwo Jima (1945) – American forces captured a strategically important Japanese island after intense fighting.
+- Battle of Okinawa (1945) – One of the bloodiest battles of the Pacific War.
+
+## 6. The Italian Campaign (1943–1945)
+
+Italy became a major battlefield after Allied forces invaded Sicily in July 1943.
+
+Following the fall of Benito Mussolini's government, Italy signed an armistice with the Allies in September 1943. German forces subsequently occupied much of northern and central Italy and continued fighting.
+
+**Major Battles and Campaigns:**
+
+- Allied Invasion of Sicily (1943) – Allied forces captured Sicily.
+- Italian Armistice (September 1943) – Italy withdrew from its alliance with Germany.
+- Battle of Monte Cassino (1944) – A series of difficult battles around a German defensive position.
+- Liberation of Rome (June 1944) – Allied forces entered Rome.
+- Spring Offensive in Italy (1945) – Allied forces broke through German defensive positions in northern Italy.
+
+## 7. The Balkan Campaign (1941–1945)
+
+The Balkans became an important theater of war following the German invasion of Yugoslavia and Greece in April 1941.
+
+The region experienced military occupation, resistance movements, guerrilla warfare, and major partisan operations.
+
+**Major Battles and Campaigns:**
+
+- Invasion of Yugoslavia (April 1941) – Germany and its allies invaded and occupied Yugoslavia.
+- Invasion of Greece (1941) – German forces launched an offensive against Greece.
+- Battle of Crete (1941) – German airborne forces captured the island of Crete.
+- Yugoslav Partisan Resistance (1941–1945) – Partisan forces led by Josip Broz Tito fought against Axis occupation.
+- Belgrade Offensive (1944) – Soviet and Yugoslav forces liberated Belgrade in October 1944.
+- Liberation of Yugoslavia (1944–1945) – Partisan forces continued operations against remaining Axis forces.
+
+## Conclusion
+
+The major battles and campaigns of World War II transformed the military and political balance of the world.
+
+The defeat of German forces at Stalingrad, the Allied landings in Normandy, the liberation of occupied territories, and the American victories in the Pacific gradually weakened the Axis Powers.
+
+By 1945, the Allied Powers had achieved decisive victories in Europe and the Pacific, bringing the largest war in human history to an end.</div>
+          </section>
+
+          <section class="war-article-section" id="course">
+            <h2><span>03</span> Military Leaders &amp; Forces</h2>
+            <div class="war-writing-area"># Military Leaders & Forces of World War II (1939–1945)
+
+World War II involved some of the largest military forces ever assembled. More than 100 million military personnel from over 30 countries participated in the conflict.
+
+The war was primarily fought between two major coalitions: the Allied Powers and the Axis Powers. Both sides relied on massive armies, powerful navies, military aviation, armored divisions, and specialized military units.
+
+The decisions of political and military leaders played a crucial role in determining the course of the war.
+
+## 1. The Allied Powers
+
+The Allied Powers were the countries that fought against Nazi Germany, Fascist Italy, Imperial Japan, and their allies.
+
+The most important Allied nations included:
+
+- United States
+- United Kingdom
+- Soviet Union (from 1941)
+- China
+- France
+- Poland
+- Canada
+- Australia
+- New Zealand
+- Yugoslavia
+- Greece
+
+The Allied coalition expanded throughout the war and eventually gained a significant advantage in manpower, industrial production, and military resources.
+
+## 2. The Axis Powers
+
+The Axis Powers were the countries that formed the main opposing coalition during World War II.
+
+**Major Axis Powers:**
+
+- Nazi Germany
+- Fascist Italy (until 1943)
+- Imperial Japan
+- Hungary
+- Romania (until 1944)
+- Bulgaria (until 1944)
+- Slovakia
+
+Germany, Italy, and Japan signed the Tripartite Pact in September 1940, formally establishing their military and political alliance.
+
+The Axis Powers sought territorial expansion and greater political influence across Europe, Asia, and Africa.
+
+## 3. Major Allied Military Leaders
+
+**United States**
+
+- Dwight D. Eisenhower – Supreme Commander of Allied forces in Western Europe and commander of Operation Overlord.
+- Douglas MacArthur – American general who commanded Allied forces in the Southwest Pacific.
+- George S. Patton – American general known for commanding armored forces in North Africa and Europe.
+- Chester W. Nimitz – Admiral who commanded American naval forces in the Pacific.
+
+**United Kingdom**
+
+- Winston Churchill – British Prime Minister and one of the central political leaders of the Allied Powers.
+- Bernard Montgomery – British field marshal who commanded forces during the North African and European campaigns.
+- Arthur Harris – Commander-in-Chief of RAF Bomber Command.
+- Alan Brooke – Chief of the Imperial General Staff.
+
+**Soviet Union**
+
+- Joseph Stalin – Soviet leader and supreme commander of the Soviet armed forces.
+- Georgy Zhukov – Soviet marshal who played a major role in the defense of Moscow and the capture of Berlin.
+- Konstantin Rokossovsky – Soviet marshal who commanded important formations on the Eastern Front.
+- Ivan Konev – Soviet marshal who commanded major offensive operations in Eastern Europe.
+
+**France**
+
+- Charles de Gaulle – Leader of Free France and later president of France.
+- Philippe Leclerc – French general who commanded the 2nd Armored Division during the liberation of France.
+
+**Yugoslavia**
+
+- Josip Broz Tito – Supreme Commander of the Yugoslav Partisan forces and later president of Yugoslavia.
+- Koča Popović – Yugoslav Partisan commander and one of the leading military figures of the resistance movement.
+
+## 4. Major Axis Military Leaders
+
+**Nazi Germany**
+
+- Adolf Hitler – Führer of Nazi Germany and supreme commander of the German armed forces.
+- Erwin Rommel – German field marshal known for commanding the Afrika Korps in North Africa.
+- Erich von Manstein – German field marshal involved in major operations on the Eastern Front.
+- Heinz Guderian – German general associated with the development and use of armored warfare.
+- Karl Dönitz – German admiral who commanded the submarine fleet and later became head of state after Hitler's death.
+
+**Fascist Italy**
+
+- Benito Mussolini – Fascist leader and dictator of Italy.
+- Pietro Badoglio – Italian marshal who became prime minister after Mussolini's removal.
+- Rodolfo Graziani – Italian marshal who commanded forces in North Africa.
+
+**Imperial Japan**
+
+- Hideki Tojo – Japanese Prime Minister during much of the war.
+- Isoroku Yamamoto – Admiral who planned the attack on Pearl Harbor and commanded the Japanese Combined Fleet.
+- Tomoyuki Yamashita – Japanese general known for his campaigns in Southeast Asia.
+- Tadamichi Kuribayashi – Japanese general who commanded the defense of Iwo Jima.
+
+## 5. Military Forces and Organization
+
+World War II introduced new levels of military organization, mechanization, and coordination between different branches of the armed forces.
+
+**Infantry**
+
+Infantry formed the foundation of most armies. Soldiers operated rifles, machine guns, submachine guns, grenades, and anti-tank weapons.
+
+**Armored Forces**
+
+Tanks and armored vehicles became essential to modern warfare. Germany's Panzer divisions, Soviet T-34 tanks, American Sherman tanks, and British armored formations played major roles in the conflict.
+
+**Air Forces**
+
+Military aviation became a decisive element of the war. Fighters, bombers, reconnaissance aircraft, and transport planes were used for air superiority, strategic bombing, ground support, and troop transportation.
+
+**Naval Forces**
+
+Navies controlled important sea routes and conducted large-scale operations using battleships, aircraft carriers, cruisers, destroyers, and submarines.
+
+**Paratroopers and Airborne Forces**
+
+Specialized airborne units were deployed behind enemy lines to capture strategic positions, disrupt supply routes, and support larger military operations.
+
+**Special Forces**
+
+Specialized units conducted reconnaissance, sabotage, intelligence operations, and raids behind enemy lines.
+
+**Engineering and Support Units**
+
+Military engineers constructed bridges, roads, defensive positions, and fortifications. Medical, logistical, and communication units supported military operations and maintained supply lines.
+
+## 6. Military Equipment and Technology
+
+World War II saw enormous developments in military technology and weapons systems.
+
+Some of the most recognizable examples included:
+
+- M4 Sherman – American medium tank.
+- T-34 – Soviet medium tank.
+- Panzer IV – German medium tank.
+- Tiger I – German heavy tank.
+- Spitfire – British fighter aircraft.
+- P-51 Mustang – American fighter aircraft.
+- B-17 Flying Fortress – American heavy bomber.
+- Messerschmitt Bf 109 – German fighter aircraft.
+- Type VII U-Boat – German submarine.
+- M1 Garand – American semi-automatic rifle.
+
+These weapons and vehicles influenced military tactics and the development of modern armed forces.
+
+## Conclusion
+
+The military leaders and armed forces of World War II played a decisive role in shaping the outcome of the conflict.
+
+The combination of industrial production, military strategy, technological innovation, and coordination between land, naval, and air forces transformed the nature of warfare.
+
+The experience of World War II influenced military doctrine, equipment development, and the organization of armed forces around the world for generations.</div>
+          </section>
+
+          <section class="war-article-section" id="aftermath">
+            <h2><span>04</span> End of World War II &amp; Consequences</h2>
+            <div class="war-writing-area"># End of World War II & Consequences (1944–1945)
+
+## Introduction
+
+The Second World War ended in 1945 after six years of devastating conflict across Europe, Africa, Asia, and the Pacific. The final Allied offensives led to the collapse of Nazi Germany and Imperial Japan. The war resulted in enormous human losses, widespread destruction, major political changes, and the beginning of a new international order.
+
+## 1. The Final Allied Offensive in Europe
+
+By 1944, the Allied forces had gained the initiative on the European front. Following the successful D-Day landings in Normandy on June 6, 1944, Allied troops advanced through France and liberated Paris in August 1944.
+
+In the east, the Soviet Red Army launched major offensives against German forces, pushing them out of occupied Soviet territory and advancing into Eastern Europe. Several countries, including Romania, Bulgaria, and Hungary, changed sides or were occupied as the German military position deteriorated.
+
+During the final months of the war, Allied forces advanced toward Germany from the west, while Soviet troops approached Berlin from the east.
+
+## 2. The Battle of Berlin and the Fall of Nazi Germany
+
+The Battle of Berlin began in April 1945, when Soviet forces launched their final major offensive against the German capital.
+
+The city was heavily defended, but German forces were unable to stop the Soviet advance. On April 30, 1945, Adolf Hitler committed suicide in his bunker in Berlin. German resistance continued for several days, but the collapse of the Nazi government was inevitable.
+
+Germany signed its unconditional surrender in May 1945. The surrender took effect on May 8, 1945, a date celebrated in much of Europe as Victory in Europe Day (VE Day).
+
+The surrender marked the end of the war in Europe.
+
+## 3. The End of the War in the Pacific
+
+Although Germany had surrendered, the war continued in the Pacific against Japan.
+
+American forces had advanced across the Pacific through a series of major naval and amphibious operations. Battles such as Iwo Jima and Okinawa demonstrated the enormous cost of defeating Japanese forces.
+
+In August 1945, the United States dropped atomic bombs on two Japanese cities:
+
+- **Hiroshima – August 6, 1945:** The first atomic bomb used in warfare was dropped on the city, causing massive destruction and loss of life.
+- **Nagasaki – August 9, 1945:** A second atomic bomb was dropped, causing further destruction and casualties.
+
+On August 8, 1945, the Soviet Union declared war on Japan and began military operations in Japanese-controlled Manchuria the following day.
+
+Facing the destruction of its cities, the Soviet offensive, and an increasingly hopeless military situation, Japan announced its surrender on August 15, 1945.
+
+The formal surrender was signed on September 2, 1945, aboard the American battleship USS Missouri in Tokyo Bay.
+
+This date is generally recognized as the official end of World War II.
+
+## 4. Human Losses and Destruction
+
+World War II was the deadliest conflict in human history. Estimates commonly place the total number of deaths between 70 and 85 million people, including military personnel and civilians.
+
+The war caused enormous destruction across Europe and Asia. Entire cities were destroyed, industrial facilities were damaged, transportation networks collapsed, and millions of people lost their homes.
+
+Civilian populations suffered from bombing campaigns, occupation, forced labor, starvation, massacres, and mass displacement.
+
+The Holocaust, carried out by Nazi Germany and its collaborators, resulted in the systematic murder of approximately six million European Jews. Millions of other people, including Roma, disabled people, Soviet prisoners of war, Polish civilians, and political opponents, were also persecuted and murdered.
+
+The consequences of the war continued to affect societies for decades.
+
+## 5. War Crimes and Postwar Trials
+
+After the war, the Allied powers organized international trials to prosecute individuals responsible for major war crimes.
+
+The **Nuremberg Trials**, held between 1945 and 1946, prosecuted leading figures of Nazi Germany. Several defendants were convicted of crimes against peace, war crimes, and crimes against humanity.
+
+The **International Military Tribunal for the Far East**, commonly known as the Tokyo Trials, prosecuted leading Japanese military and political figures for their roles in the war.
+
+These trials helped establish important principles of international criminal law, including the responsibility of individuals for crimes committed during wartime.
+
+## 6. Political Changes After the War
+
+The end of World War II transformed the political map of the world.
+
+Germany was divided into four occupation zones controlled by the United States, the United Kingdom, France, and the Soviet Union. Berlin was also divided into occupation sectors.
+
+The United States and the Soviet Union emerged as the two dominant global powers. Their growing political, military, and ideological rivalry led to the beginning of the Cold War.
+
+In Eastern Europe, Soviet influence expanded and communist governments came to power in several countries.
+
+The war also accelerated the process of decolonization, as European colonial powers weakened and independence movements gained strength across Asia and Africa.
+
+## 7. The Formation of the United Nations
+
+One of the most important developments after World War II was the creation of the United Nations (UN).
+
+The organization was officially established on October 24, 1945, with the goal of maintaining international peace and security, promoting cooperation between countries, and preventing another global conflict.
+
+The United Nations became a central institution in international diplomacy and postwar relations.
+
+## 8. The Consequences for Yugoslavia
+
+Yugoslavia experienced severe destruction and enormous human losses during the war.
+
+The Yugoslav Partisan movement, led by Josip Broz Tito, played a major role in the liberation of the country. By the end of 1945, the monarchy had been replaced by a communist-led political system.
+
+The new state became the Federal People's Republic of Yugoslavia in 1945. It was later renamed the Socialist Federal Republic of Yugoslavia in 1963.
+
+The country underwent major political, economic, and social changes, including the nationalization of important industries and the establishment of a socialist system.
+
+## Conclusion
+
+The end of World War II in 1945 marked a turning point in modern history. The defeat of Nazi Germany and Imperial Japan ended the largest global conflict ever fought, but the consequences of the war continued for generations.
+
+The destruction of cities, the loss of millions of lives, the Holocaust, and the displacement of entire populations demonstrated the devastating effects of modern warfare.
+
+The postwar world was shaped by the emergence of the United States and the Soviet Union as superpowers, the creation of the United Nations, and the beginning of the Cold War. World War II fundamentally changed international politics, military organization, technology, and relations between nations.</div>
+          </section>
+        </div>
+
+        <aside class="war-article-nav" aria-label="Article sections">
+          <h3>On This Page</h3>
+          <ol>
+            <li><a href="#overview">Causes of World War II</a></li>
+            <li><a href="#background">Major Battles &amp; Campaigns</a></li>
+            <li><a href="#course">Military Leaders &amp; Forces</a></li>
+            <li><a href="#aftermath">End of World War II &amp; Consequences</a></li>
+          </ol>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Military Base home">
+          <span class="logo-placeholder" aria-hidden="true"></span>
+          <span class="brand-name">MILITARY <span>BASE</span></span>
+        </a>
+        <p>A thoughtful reference to the forces, equipment, and stories that shape our world.</p>
+      </div>
+      <div class="footer-column">
+        <h2>EXPLORE</h2>
+        <a href="world-militaries.html">World Militaries</a>
+        <a href="military-units.html">Military Units</a>
+        <a href="military-ranks.html">Military Ranks</a>
+        <a href="weapons.html">Weapons</a>
+        <a href="hunting.html">Hunting</a>
+      </div>
+      <div class="footer-column">
+        <h2>DISCOVER</h2>
+        <a href="military-aviation.html">Military Aviation</a>
+        <a href="land-systems.html">Land Systems</a>
+        <a href="naval-forces.html">Naval Forces</a>
+        <a href="military-history.html">Military History</a>
+        <a href="../index.html#categories">All Categories</a>
+      </div>
+      <div class="footer-column footer-about">
+        <h2>ABOUT MILITARY BASE</h2>
+        <p>Building an accessible, well-organized encyclopedia of military and outdoor knowledge.</p>
+        <a href="mailto:contact@militarybase.example">Contact: contact@militarybase.example</a>
+      </div>
+    </div>
+    <div class="footer-bottom page-width">
+      <span>© 2026 MILITARY BASE. ALL RIGHTS RESERVED.</span>
+      <span>INFORMATION. CONTEXT. UNDERSTANDING.</span>
+      <a href="#main-content">BACK TO TOP ↑</a>
+    </div>
+  </footer>
+  <script>
+    document.querySelectorAll(".war-writing-area").forEach((area) => {
+      const lines = area.textContent.replace(/\r/g, "").split("\n");
+      const content = document.createDocumentFragment();
+      let paragraph = [];
+      let list = null;
+      let skippedMainHeading = false;
+
+      const appendInlineText = (element, text) => {
+        const parts = text.split(/(\*\*[^*]+\*\*)/g);
+        parts.forEach((part) => {
+          if (part.startsWith("**") && part.endsWith("**")) {
+            const strong = document.createElement("strong");
+            strong.textContent = part.slice(2, -2);
+            element.append(strong);
+          } else if (part) {
+            element.append(document.createTextNode(part));
+          }
+        });
+      };
+
+      const flushParagraph = () => {
+        if (!paragraph.length) return;
+        const element = document.createElement("p");
+        appendInlineText(element, paragraph.join(" "));
+        content.append(element);
+        paragraph = [];
+      };
+
+      const closeList = () => {
+        if (!list) return;
+        content.append(list);
+        list = null;
+      };
+
+      lines.forEach((rawLine) => {
+        const line = rawLine.trim();
+        if (!line) {
+          flushParagraph();
+          closeList();
+          return;
+        }
+
+        const heading = line.match(/^(#{1,3})\s+(.+)$/);
+        if (heading) {
+          flushParagraph();
+          closeList();
+          if (heading[1] === "#" && !skippedMainHeading) {
+            skippedMainHeading = true;
+            return;
+          }
+          const element = document.createElement(heading[1].length === 3 ? "h5" : "h4");
+          appendInlineText(element, heading[2]);
+          content.append(element);
+          return;
+        }
+
+        const item = line.match(/^[-*]\s+(.+)$/);
+        if (item) {
+          flushParagraph();
+          if (!list) list = document.createElement("ul");
+          const element = document.createElement("li");
+          appendInlineText(element, item[1]);
+          list.append(element);
+          return;
+        }
+
+        closeList();
+        if (/^\d+\.\s+[A-Z][^.!?]{0,60}$/.test(line)) {
+          flushParagraph();
+          const element = document.createElement("h4");
+          appendInlineText(element, line.replace(/^\d+\.\s+/, ""));
+          content.append(element);
+          return;
+        }
+        paragraph.push(line);
+      });
+
+      flushParagraph();
+      closeList();
+      area.replaceChildren(content);
+      area.classList.add("is-formatted");
+    });
+  </script>
+  <script src="../language.js" defer></script>
+</body>
+</html>

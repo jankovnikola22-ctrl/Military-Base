@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="World War I article page.">
+  <meta name="theme-color" content="#111411">
+  <title>World War I | MILITARY BASE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .war-article {
+      padding-block: 42px 100px;
+    }
+
+    .war-breadcrumbs {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 32px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .war-breadcrumbs a {
+      color: var(--olive-bright);
+    }
+
+    .war-article-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 260px;
+      align-items: start;
+      gap: 26px;
+    }
+
+    .war-article-content {
+      display: grid;
+      gap: 20px;
+    }
+
+    .war-article-section,
+    .war-article-nav {
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, rgba(32, 37, 31, 0.86), rgba(25, 29, 25, 0.94));
+    }
+
+    .war-article-section {
+      padding: clamp(22px, 3.2vw, 36px);
+      border-left: 2px solid rgba(195, 195, 148, 0.55);
+      scroll-margin-top: 100px;
+    }
+
+    .war-article-section h2,
+    .war-article-nav h3 {
+      margin: 0;
+      font-family: var(--heading-font);
+      font-size: 27px;
+      font-weight: 600;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .war-article-section h2 {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+      font-size: clamp(25px, 3vw, 32px);
+    }
+
+    .war-article-section h2 span {
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 0.08em;
+    }
+
+    .war-writing-area {
+      margin-top: 20px;
+      color: #d3d4ca;
+      font-size: 15px;
+      line-height: 1.85;
+      white-space: pre-line;
+    }
+
+    .war-writing-area.is-formatted {
+      white-space: normal;
+    }
+
+    .war-writing-area p {
+      max-width: 76ch;
+      margin: 0 0 1.15em;
+    }
+
+    .war-writing-area p:last-child,
+    .war-writing-area ul:last-child {
+      margin-bottom: 0;
+    }
+
+    .war-writing-area h4 {
+      margin: 1.8em 0 0.55em;
+      color: var(--olive-bright);
+      font-family: var(--heading-font);
+      font-size: 23px;
+      font-weight: 600;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .war-writing-area h4:first-child {
+      margin-top: 0;
+    }
+
+    .war-writing-area h5 {
+      margin: 1.35em 0 0.4em;
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .war-writing-area ul {
+      display: grid;
+      gap: 9px;
+      max-width: 76ch;
+      margin: 0 0 1.2em;
+      padding-left: 22px;
+    }
+
+    .war-writing-area li {
+      padding-left: 3px;
+    }
+
+    .war-writing-area li::marker {
+      color: var(--gold);
+    }
+
+    .war-writing-area strong {
+      color: var(--white);
+      font-weight: 700;
+    }
+
+    .war-article-nav {
+      position: sticky;
+      top: 100px;
+      padding: 22px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .war-article-nav h3 {
+      margin-bottom: 15px;
+      color: var(--olive-bright);
+      font-size: 21px;
+    }
+
+    .war-article-nav ol {
+      display: grid;
+      gap: 4px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .war-article-nav a {
+      display: block;
+      padding: 10px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      transition: color 180ms ease;
+    }
+
+    .war-article-nav a:hover,
+    .war-article-nav a:focus-visible {
+      color: var(--olive-bright);
+    }
+
+    @media (max-width: 760px) {
+      .war-article {
+        padding-block: 42px 72px;
+      }
+
+      .war-article-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .war-article-nav {
+        position: static;
+        grid-row: 1;
+      }
+
+      .war-article-section {
+        padding: 22px 18px;
+      }
+
+      .war-writing-area {
+        font-size: 14px;
+        line-height: 1.8;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html" aria-label="Military Base home">
+        <span class="logo-placeholder" aria-hidden="true"></span>
+        <span class="brand-name">MILITARY <span>BASE</span></span>
+      </a>
+      <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation">
+      <label class="menu-button" for="menu-toggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-home" href="../index.html">Home</a>
+        <a href="world-militaries.html">World Militaries</a>
+        <a href="military-units.html">Military Units</a>
+        <a href="military-ranks.html">Military Ranks</a>
+        <a href="weapons.html">Weapons</a>
+        <a href="military-aviation.html">Military Aviation</a>
+        <a href="land-systems.html">Land Systems</a>
+        <a href="naval-forces.html">Naval Forces</a>
+        <a href="hunting.html">Hunting</a>
+        <a href="military-history.html">Military History</a>
+      </nav>
+      <a class="header-search" href="military-history.html" aria-label="Back to Military History">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="10.8" cy="10.8" r="6.8"></circle>
+          <path d="m16 16 5 5"></path>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="section-hero section-hero--history">
+      <div class="page-width section-hero-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> MILITARY HISTORY</p>
+        <h1>WORLD WAR <span>I</span></h1>
+        <a class="text-link" href="military-history.html">← Back to Military History</a>
+      </div>
+    </section>
+
+    <article class="war-article page-width">
+      <nav class="war-breadcrumbs" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span aria-hidden="true">/</span>
+        <a href="military-history.html">Military History</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">World War I</span>
+      </nav>
+
+      <div class="war-article-layout">
+        <div class="war-article-content">
+          <section class="war-article-section" id="overview">
+            <h2><span>01</span> Causes of World War I</h2>
+            <div class="war-writing-area">World War I, also known as the Great War, began in July 1914 and became one of the largest and deadliest conflicts in human history. The war involved many of the world's major powers and fundamentally changed the political, military, and social structure of Europe.
+
+The outbreak of the war was not caused by a single event. Instead, it was the result of several decades of growing political tensions, military competition, nationalism, imperial ambitions, and a complex system of international alliances.
+
+1. Nationalism
+
+Nationalism was one of the major causes of World War I. During the late 19th and early 20th centuries, European nations increasingly promoted national pride, independence, and political dominance.
+
+In the Balkans, nationalist movements became particularly important. Several ethnic groups wanted independence from large multinational empires, especially Austria-Hungary and the Ottoman Empire. Serbia supported the idea of uniting South Slavic peoples, which created serious tensions with Austria-Hungary.
+
+2. Imperialism
+
+European powers competed for colonies, natural resources, trade routes, and global influence. Great Britain, France, and Germany were among the leading imperial powers.
+
+Germany's growing economic and military strength challenged the established position of Britain and France. Competition over overseas territories and political influence increased distrust between European countries.
+
+3. Militarism and the Arms Race
+
+Before 1914, European countries invested heavily in expanding their armies and navies. Military strength became an important symbol of national power.
+
+Germany and Great Britain entered a major naval arms race, competing to build larger and more powerful battleships. At the same time, European armies expanded their forces, developed new weapons, and prepared detailed military mobilization plans.
+
+This atmosphere of military competition made a large-scale war increasingly possible.
+
+4. The Alliance System
+
+Europe was divided into two major alliance groups:
+
+Triple Alliance (1882):
+
+Germany
+
+Austria-Hungary
+
+Italy
+
+Triple Entente (1907):
+
+Great Britain
+
+France
+
+Russia
+
+These alliances were intended to provide protection against potential enemies. However, they also meant that a conflict between two countries could quickly involve several other major powers.
+
+Italy initially remained neutral in 1914 and later entered the war on the side of the Entente in 1915.
+
+5. The Balkan Crisis
+
+The Balkans were one of the most unstable regions in Europe before World War I. The decline of the Ottoman Empire created opportunities for new states and increased competition between regional powers.
+
+Austria-Hungary wanted to maintain its influence in the Balkans, while Serbia aimed to strengthen its position and support South Slavic national movements.
+
+The annexation of Bosnia and Herzegovina by Austria-Hungary in 1908 further increased tensions, particularly with Serbia.
+
+6. The Assassination of Archduke Franz Ferdinand
+
+On June 28, 1914, Archduke Franz Ferdinand, heir to the Austro-Hungarian throne, was assassinated in Sarajevo by Gavrilo Princip, a Bosnian Serb nationalist.
+
+The assassination became the immediate trigger for the outbreak of World War I.
+
+Austria-Hungary blamed Serbia for supporting anti-Austrian nationalist activities and issued an ultimatum on July 23, 1914. Serbia accepted most of its demands but rejected certain conditions that threatened its sovereignty.
+
+Austria-Hungary declared war on Serbia on July 28, 1914.
+
+The Beginning of World War I
+
+Following Austria-Hungary's declaration of war, the alliance system and military mobilization plans accelerated the escalation of the conflict.
+
+Russia mobilized its forces in support of Serbia. Germany declared war on Russia on August 1 and France on August 3. Germany invaded Belgium on August 4, prompting Great Britain to declare war on Germany.
+
+What began as a regional conflict in the Balkans quickly developed into a global war.
+
+World War I had begun.</div>
+          </section>
+
+          <section class="war-article-section" id="background">
+            <h2><span>02</span> Major Battles & Campaigns</h2>
+            <div class="war-writing-area"># Major Battles & Campaigns of World War I (1914–1918)
+
+World War I was fought across several major fronts in Europe, the Middle East, Africa, and the seas. Millions of soldiers participated in major battles and military campaigns that shaped the course of the conflict.
+
+The war introduced a new form of industrial warfare, characterized by trench systems, machine guns, heavy artillery, tanks, and military aircraft. Some battles lasted for months and resulted in enormous casualties on both sides.
+
+## 1. The Western Front
+
+The Western Front was one of the most important battlefields of World War I. It stretched across Belgium and northeastern France, where German forces fought against British and French armies.
+
+**Major Battles:**
+
+- First Battle of the Marne (1914) – Stopped the German advance toward Paris.
+- Battle of Verdun (1916) – One of the longest and deadliest battles of the war.
+- Battle of the Somme (1916) – A major Allied offensive against German positions.
+- Battle of Passchendaele (1917) – Known for extreme mud, difficult conditions, and heavy casualties.
+- Second Battle of the Marne (1918) – A major Allied victory that marked a turning point on the Western Front.
+
+## 2. The Eastern Front
+
+The Eastern Front extended across Eastern Europe, where Germany and Austria-Hungary fought against the Russian Empire and its allies.
+
+**Major Battles:**
+
+- Battle of Tannenberg (1914) – A major German victory against Russian forces.
+- First Battle of the Masurian Lakes (1914) – Another important German victory in East Prussia.
+- Brusilov Offensive (1916) – A major Russian offensive against Austria-Hungary.
+- Russian Revolution (1917) – Political upheaval that led to Russia's withdrawal from the war.
+- Treaty of Brest-Litovsk (1918) – The agreement that formally ended Russia's participation in the war.
+
+## 3. The Balkan Front
+
+The Balkans played an important role in the early stages of World War I. Serbia successfully resisted the first Austro-Hungarian invasions in 1914, but faced a much larger offensive in 1915.
+
+**Major Battles and Campaigns:**
+
+- Battle of Cer (1914) – The Serbian Army achieved an important victory against Austria-Hungary.
+- Battle of Kolubara (1914) – Serbian forces launched a successful counteroffensive and liberated Belgrade.
+- Invasion of Serbia (1915) – German, Austro-Hungarian, and Bulgarian forces launched a coordinated attack.
+- Serbian Army's Retreat through Albania (1915–1916) – Serbian troops retreated across Albania toward the Adriatic coast.
+- Salonika Front (1915–1918) – Allied forces fought against the Central Powers in the Balkans.
+- Breakthrough of the Salonika Front (1918) – Allied and Serbian forces launched a successful offensive that contributed to the liberation of Serbia.
+
+## 4. The Italian Front
+
+Italy entered World War I on the side of the Entente in May 1915 and fought against Austria-Hungary along the mountainous border between the two countries.
+
+**Major Battles:**
+
+- First Battle of the Isonzo (1915) – The beginning of a series of battles along the Isonzo River.
+- Battle of Caporetto (1917) – A major Central Powers victory that forced Italian forces to retreat.
+- Battle of the Piave River (1918) – Italian forces successfully stopped an Austro-Hungarian offensive.
+- Battle of Vittorio Veneto (1918) – A decisive Italian victory that contributed to the collapse of Austria-Hungary.
+
+## 5. The Gallipoli Campaign (1915–1916)
+
+The Gallipoli Campaign was an Allied military operation aimed at defeating the Ottoman Empire and securing a route through the Dardanelles Strait.
+
+British, French, Australian, and New Zealand forces attempted to capture the Gallipoli Peninsula. However, strong Ottoman resistance and difficult terrain prevented the Allies from achieving their objectives.
+
+The campaign ended with an Allied withdrawal in January 1916. It became one of the most significant military events in Australian, New Zealand, and Turkish history.
+
+## 6. The Middle Eastern Campaign
+
+The Ottoman Empire fought against British, French, and other Allied forces across the Middle East.
+
+**Major Campaigns:**
+
+- Mesopotamian Campaign (1914–1918) – British and Allied forces fought Ottoman troops in modern-day Iraq.
+- Sinai and Palestine Campaign (1915–1918) – British forces advanced against Ottoman positions.
+- Battle of Jerusalem (1917) – British forces captured Jerusalem.
+- Arab Revolt (1916–1918) – Arab forces revolted against Ottoman rule with Allied support.
+
+## 7. The War at Sea
+
+Naval warfare was essential to controlling trade routes, transporting troops, and blockading enemy territory.
+
+**Major Naval Battles and Operations:**
+
+- Battle of Heligoland Bight (1914) – An early naval battle between British and German forces.
+- Battle of Dogger Bank (1915) – A naval engagement in the North Sea.
+- Battle of Jutland (1916) – The largest naval battle of World War I.
+- German Unrestricted Submarine Warfare (1917) – German submarines attacked merchant and military shipping, contributing to the United States entering the war.
+
+## Conclusion
+
+The major battles and campaigns of World War I demonstrated the destructive power of modern industrial warfare. Despite enormous casualties and prolonged fighting, neither side achieved a decisive victory during the first years of the conflict.
+
+By 1918, the balance of power began to shift in favor of the Allies. Their successful offensives, combined with the exhaustion of the Central Powers, ultimately led to the end of the war in November 1918.</div>
+          </section>
+
+          <section class="war-article-section" id="course">
+            <h2><span>03</span> Military Leaders & Forces</h2>
+            <div class="war-writing-area"># Military Leaders & Forces of World War I (1914–1918)
+
+World War I involved some of the largest military forces ever assembled at that time. Millions of soldiers from Europe, Asia, Africa, and other parts of the world participated in the conflict.
+
+The war was fought between two major military coalitions: the Allied Powers and the Central Powers. Each side was led by influential political and military figures whose decisions shaped the course of the war.
+
+## 1. The Allied Powers
+
+The Allied Powers, also known as the Entente Powers, initially consisted of France, Great Britain, and Russia. During the war, several other countries joined their side, including Serbia, Italy, Japan, Romania, and the United States.
+
+**Major Allied Countries:**
+- France
+- United Kingdom
+- Russian Empire
+- Serbia
+- Italy (from 1915)
+- Japan
+- Romania (from 1916)
+- United States (from 1917)
+
+## 2. The Central Powers
+
+The Central Powers were the main opponents of the Allied Powers. The coalition was led by Germany and Austria-Hungary, with the Ottoman Empire and Bulgaria joining during the conflict.
+
+**Major Central Powers Countries:**
+- German Empire
+- Austria-Hungary
+- Ottoman Empire
+- Kingdom of Bulgaria
+
+## 3. Major Allied Military Leaders
+
+**France**
+- Ferdinand Foch – Supreme Allied Commander during the final stage of the war.
+- Joseph Joffre – Commander-in-chief of French forces during the early years of the war.
+- Philippe Pétain – French commander who played a major role in the Battle of Verdun.
+
+**United Kingdom**
+- Douglas Haig – Commander of the British Expeditionary Force from 1915.
+- John Jellicoe – Admiral and commander of the British Grand Fleet during the Battle of Jutland.
+
+**Russian Empire**
+- Aleksei Brusilov – Russian general responsible for the successful Brusilov Offensive of 1916.
+- Grand Duke Nicholas Nikolaevich – Commander-in-chief of Russian forces during the early part of the war.
+
+**Serbia**
+- Radomir Putnik – Chief of the Serbian General Staff during the early years of the war.
+- Živojin Mišić – Serbian field marshal who played a decisive role in the Battle of Kolubara.
+- Stepa Stepanović – Serbian field marshal associated with the victory at the Battle of Cer.
+- Petar Bojović – Serbian field marshal who commanded forces during the final liberation operations of 1918.
+
+**United States**
+- John J. Pershing – Commander of the American Expeditionary Forces in Europe.
+
+**Italy**
+- Luigi Cadorna – Chief of the Italian General Staff during much of the war.
+- Armando Diaz – Italian commander who led the army during the final phase of the conflict.
+
+## 4. Major Central Powers Military Leaders
+
+**German Empire**
+- Paul von Hindenburg – German field marshal and later president of Germany.
+- Erich Ludendorff – Senior German military commander who played a major role in planning military operations.
+- Helmuth von Moltke the Younger – Chief of the German General Staff at the beginning of the war.
+- Erich von Falkenhayn – German commander during the Battle of Verdun.
+
+**Austria-Hungary**
+- Franz Conrad von Hötzendorf – Chief of the Austro-Hungarian General Staff.
+- Svetozar Boroević – Austro-Hungarian field marshal known for his defensive operations on the Italian Front.
+
+**Ottoman Empire**
+- Enver Pasha – Ottoman minister of war and one of the empire's leading military figures.
+- Mustafa Kemal – Ottoman officer who gained recognition during the Gallipoli Campaign.
+
+**Bulgaria**
+- Nikola Zhekov – Commander-in-chief of the Bulgarian Army during much of the war.
+
+## 5. Military Forces and Organization
+
+World War I armies were organized into several major military branches, each performing different roles on the battlefield.
+
+**Infantry**
+The largest component of most armies. Infantry soldiers fought on foot using rifles, machine guns, grenades, and bayonets.
+
+**Artillery**
+Artillery units operated heavy guns, howitzers, and mortars. They were responsible for bombardments, destroying enemy positions, and supporting infantry attacks.
+
+**Cavalry**
+Although cavalry had become less effective against modern weapons, mounted units were still used for reconnaissance, communication, and certain offensive operations.
+
+**Naval Forces**
+Navies protected maritime routes, transported troops, enforced blockades, and fought enemy fleets.
+
+**Military Aviation**
+Aircraft were initially used for reconnaissance but later developed into fighters and bombers. They became an increasingly important part of military operations.
+
+**Engineering and Support Units**
+Military engineers built bridges, trenches, defensive positions, and communication systems. Medical and supply units supported soldiers throughout the conflict.
+
+## Conclusion
+
+The military leaders and armed forces of World War I played a decisive role in shaping the conflict. Their strategies, decisions, and technological developments transformed warfare and influenced military organization for decades.
+
+The experience of World War I changed the way armies were trained, equipped, and deployed, creating the foundations of modern military operations.</div>
+          </section>
+
+          <section class="war-article-section" id="aftermath">
+            <h2><span>04</span> End of World War I & Consequences</h2>
+            <div class="war-writing-area"># End of World War I & Consequences (1918–1920)
+
+After more than four years of devastating warfare, World War I finally came to an end in November 1918. Millions of soldiers and civilians had lost their lives, entire regions had been destroyed, and several major European empires were on the verge of collapse.
+
+The final year of the war brought major military defeats for the Central Powers, while the Allied Powers launched a series of successful offensives that ultimately ended the conflict.
+
+## 1. The Final Offensives of 1918
+
+In the spring of 1918, Germany launched a series of major attacks on the Western Front, known as the Spring Offensive. The objective was to defeat the Allied forces before American troops could arrive in large numbers.
+
+Despite initial German successes, the offensive eventually lost momentum due to strong Allied resistance, supply problems, and heavy casualties.
+
+In August 1918, Allied forces launched the Hundred Days Offensive, a series of successful attacks that forced German troops into retreat.
+
+Meanwhile, on the Balkan Front, Serbian and Allied forces broke through the Salonika Front in September 1918. This breakthrough accelerated the liberation of Serbia and contributed to the collapse of Bulgaria's military position.
+
+## 2. The Collapse of the Central Powers
+
+By the autumn of 1918, the Central Powers were facing military defeats, economic difficulties, and political instability.
+
+One by one, Germany's allies withdrew from the war:
+
+- Bulgaria signed an armistice on September 29, 1918.
+- The Ottoman Empire signed an armistice on October 30, 1918.
+- Austria-Hungary signed an armistice on November 3, 1918.
+- Germany signed an armistice on November 11, 1918.
+
+The collapse of these powers marked the end of the Central Powers as a functioning military coalition.
+
+## 3. The Armistice of November 11, 1918
+
+On November 11, 1918, Germany signed an armistice with the Allied Powers in a railway carriage in the Forest of Compiègne, France.
+
+The agreement officially ended fighting on the Western Front at 11:00 a.m.
+
+The armistice required Germany to withdraw its forces from occupied territories, surrender significant amounts of military equipment, and accept Allied control over important strategic positions.
+
+Although the fighting had stopped, a formal peace settlement had not yet been established.
+
+## 4. The Treaty of Versailles (1919)
+
+The Treaty of Versailles was signed on June 28, 1919, between Germany and the Allied Powers.
+
+The treaty established the main conditions of peace following the war.
+
+Its major provisions included:
+
+- Germany accepted responsibility under the treaty's war guilt clause.
+- Germany was required to pay substantial reparations.
+- The German military was heavily restricted.
+- Germany lost significant territories and all its overseas colonies.
+- The Rhineland was placed under demilitarized conditions.
+
+The treaty created lasting political and economic tensions in Europe and became one of the factors contributing to the rise of future conflicts.
+
+## 5. The Collapse of European Empires
+
+World War I caused the destruction of several major European empires that had dominated the continent for centuries.
+
+**German Empire**
+
+The German monarchy collapsed in November 1918, leading to the establishment of the Weimar Republic.
+
+**Austria-Hungary**
+
+The Austro-Hungarian Empire dissolved into several independent states and territories, including Austria, Hungary, and Czechoslovakia. Its collapse also contributed to the formation of the Kingdom of Serbs, Croats and Slovenes.
+
+**Ottoman Empire**
+
+The Ottoman Empire lost much of its territory in the Middle East. Its eventual dissolution led to the establishment of the Republic of Turkey in 1923.
+
+**Russian Empire**
+
+The Russian monarchy collapsed during the Russian Revolution of 1917. The political changes eventually led to the establishment of the Soviet Union in 1922.
+
+## 6. The Human and Economic Consequences
+
+World War I had devastating consequences for soldiers, civilians, and national economies.
+
+**Human Losses**
+
+Approximately 9 to 10 million military personnel died during the war, while millions of civilians also lost their lives due to violence, disease, hunger, and displacement.
+
+**Economic Destruction**
+
+Many European cities, villages, factories, railways, and agricultural areas were severely damaged. Countries accumulated enormous debts and faced serious economic difficulties.
+
+**Social Changes**
+
+The war transformed European society. Women entered many industries and workplaces in greater numbers, while millions of veterans returned home with physical and psychological injuries.
+
+**Military Consequences**
+
+The experience of industrial warfare changed military strategy and technology. Tanks, aircraft, submarines, machine guns, and modern artillery became essential elements of military planning.
+
+## 7. The Formation of New States
+
+The collapse of the great empires transformed the political map of Europe.
+
+Several new states emerged or regained independence after the war, including:
+
+- Poland
+- Czechoslovakia
+- Finland
+- Estonia
+- Latvia
+- Lithuania
+- Austria
+- Hungary
+
+The Kingdom of Serbs, Croats and Slovenes was established on December 1, 1918, bringing together Serbia and South Slavic territories formerly belonging to Austria-Hungary.
+
+## Conclusion
+
+World War I officially ended in November 1918, but its consequences continued to shape international relations for decades.
+
+The collapse of empires, the creation of new countries, economic instability, and unresolved political tensions transformed Europe and the wider world.
+
+The peace settlements following the war failed to establish lasting stability. Many of the political and territorial disputes created or intensified by World War I contributed to the conditions that eventually led to World War II.</div>
+          </section>
+        </div>
+
+        <aside class="war-article-nav" aria-label="Article sections">
+          <h3>On This Page</h3>
+          <ol>
+            <li><a href="#overview">Causes of World War I</a></li>
+            <li><a href="#background">Major Battles & Campaigns</a></li>
+            <li><a href="#course">Military Leaders & Forces</a></li>
+            <li><a href="#aftermath">End of World War I & Consequences</a></li>
+          </ol>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Military Base home">
+          <span class="logo-placeholder" aria-hidden="true"></span>
+          <span class="brand-name">MILITARY <span>BASE</span></span>
+        </a>
+        <p>A thoughtful reference to the forces, equipment, and stories that shape our world.</p>
+      </div>
+      <div class="footer-column">
+        <h2>EXPLORE</h2>
+        <a href="world-militaries.html">World Militaries</a>
+        <a href="military-units.html">Military Units</a>
+        <a href="military-ranks.html">Military Ranks</a>
+        <a href="weapons.html">Weapons</a>
+        <a href="hunting.html">Hunting</a>
+      </div>
+      <div class="footer-column">
+        <h2>DISCOVER</h2>
+        <a href="military-aviation.html">Military Aviation</a>
+        <a href="land-systems.html">Land Systems</a>
+        <a href="naval-forces.html">Naval Forces</a>
+        <a href="military-history.html">Military History</a>
+        <a href="../index.html#categories">All Categories</a>
+      </div>
+      <div class="footer-column footer-about">
+        <h2>ABOUT MILITARY BASE</h2>
+        <p>Building an accessible, well-organized encyclopedia of military and outdoor knowledge.</p>
+        <a href="mailto:contact@militarybase.example">Contact: contact@militarybase.example</a>
+      </div>
+    </div>
+    <div class="footer-bottom page-width">
+      <span>© 2026 MILITARY BASE. ALL RIGHTS RESERVED.</span>
+      <span>INFORMATION. CONTEXT. UNDERSTANDING.</span>
+      <a href="#main-content">BACK TO TOP ↑</a>
+    </div>
+  </footer>
+  <script>
+    document.querySelectorAll(".war-writing-area").forEach((area) => {
+      const lines = area.textContent.replace(/\r/g, "").split("\n");
+      const content = document.createDocumentFragment();
+      let paragraph = [];
+      let list = null;
+      let skippedMainHeading = false;
+
+      const appendInlineText = (element, text) => {
+        const parts = text.split(/(\*\*[^*]+\*\*)/g);
+        parts.forEach((part) => {
+          if (part.startsWith("**") && part.endsWith("**")) {
+            const strong = document.createElement("strong");
+            strong.textContent = part.slice(2, -2);
+            element.append(strong);
+          } else if (part) {
+            element.append(document.createTextNode(part));
+          }
+        });
+      };
+
+      const flushParagraph = () => {
+        if (!paragraph.length) return;
+        const element = document.createElement("p");
+        appendInlineText(element, paragraph.join(" "));
+        content.append(element);
+        paragraph = [];
+      };
+
+      const closeList = () => {
+        if (!list) return;
+        content.append(list);
+        list = null;
+      };
+
+      lines.forEach((rawLine) => {
+        const line = rawLine.trim();
+
+        if (!line) {
+          flushParagraph();
+          closeList();
+          return;
+        }
+
+        const heading = line.match(/^(#{1,3})\s+(.+)$/);
+        if (heading) {
+          flushParagraph();
+          closeList();
+          if (heading[1] === "#" && !skippedMainHeading) {
+            skippedMainHeading = true;
+            return;
+          }
+          const element = document.createElement(heading[1].length === 3 ? "h5" : "h4");
+          appendInlineText(element, heading[2]);
+          content.append(element);
+          return;
+        }
+
+        const item = line.match(/^[-*]\s+(.+)$/);
+        if (item) {
+          flushParagraph();
+          if (!list) list = document.createElement("ul");
+          const element = document.createElement("li");
+          appendInlineText(element, item[1]);
+          list.append(element);
+          return;
+        }
+
+        closeList();
+        if (/^\d+\.\s+[A-Z][^.!?]{0,60}$/.test(line)) {
+          flushParagraph();
+          const element = document.createElement("h4");
+          appendInlineText(element, line.replace(/^\d+\.\s+/, ""));
+          content.append(element);
+          return;
+        }
+        paragraph.push(line);
+      });
+
+      flushParagraph();
+      closeList();
+      area.replaceChildren(content);
+      area.classList.add("is-formatted");
+    });
+  </script>
+  <script src="../language.js" defer></script>
+</body>
+</html>

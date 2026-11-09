@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search and filter a reference catalog of notable hunting and sporting shotguns.">
+  <meta name="theme-color" content="#111411">
+  <title>Shotguns | MILITARY BASE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style/hunting-firearms.css">
+</head>
+<body data-firearm-catalog="shotguns">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="../index.html" aria-label="Military Base home"><span class="logo-placeholder" aria-hidden="true"></span><span class="brand-name">MILITARY <span>BASE</span></span></a>
+    <input class="menu-toggle" type="checkbox" id="menu-toggle" aria-label="Toggle navigation"><label class="menu-button" for="menu-toggle" aria-label="Toggle navigation menu"><span></span><span></span><span></span></label>
+    <nav class="main-nav" aria-label="Main navigation"><a class="nav-home" href="../index.html">Home</a><a href="world-militaries.html">World Militaries</a><a href="military-units.html">Military Units</a><a href="military-ranks.html">Military Ranks</a><a href="weapons.html">Weapons</a><a href="military-aviation.html">Military Aviation</a><a href="land-systems.html">Land Systems</a><a href="naval-forces.html">Naval Forces</a><a href="hunting.html">Hunting</a><a href="military-history.html">Military History</a></nav>
+    <a class="header-search" href="hunting-rifles.html" aria-label="Back to Hunting Firearms"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m7 7-7-7 7-7"></path></svg></a>
+  </div></header>
+  <main id="main-content">
+    <section class="section-hero section-hero--hunting"><div class="page-width section-hero-content"><p class="eyebrow"><span class="eyebrow-line"></span> SPORTING FIREARMS CATALOG</p><h1>HUNTING <span>SHOTGUNS</span></h1><p>Browse notable sporting shotgun models, manufacturers, introduction dates, and available gauges.</p><a class="text-link" href="hunting-rifles.html">← Back to Hunting Firearms</a></div></section>
+    <section class="hunting-catalog-section page-width">
+      <div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> REFERENCE CATALOG</p><h2>SHOTGUN <span>MODELS</span></h2></div><p class="section-intro hunting-catalog-intro">A curated starting catalog of established hunting and sporting models. Gauge availability varies by model variant and production period.</p></div>
+      <div class="hunting-catalog-controls" aria-label="Catalog filters and sorting">
+        <label>Search models<input id="firearm-search" type="search" placeholder="Name or manufacturer" autocomplete="off"></label>
+        <label>Filter by gauge<select id="gauge-filter"><option value="">All gauges</option></select></label>
+        <label>Sort<select id="sort-by"><option value="name-asc">Name (A–Z)</option><option value="name-desc">Name (Z–A)</option><option value="year-asc">Year (oldest first)</option><option value="year-desc">Year (newest first)</option><option value="caliber-asc">Gauge (A–Z)</option><option value="caliber-desc">Gauge (Z–A)</option></select></label>
+      </div>
+      <p class="hunting-catalog-status" id="catalog-status" role="status" aria-live="polite"></p>
+      <div class="hunting-firearm-grid" id="firearm-grid"></div>
+      <p class="hunting-catalog-note">Years identify the model's introduction, not every later variant. Gauge availability differs across editions; verify specifications with the manufacturer before relying on them.</p>
+      <a class="hunting-catalog-back" href="hunting-rifles.html">← Back to Hunting Firearms</a>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="page-width footer-bottom"><span>© 2026 MILITARY BASE. ALL RIGHTS RESERVED.</span><a href="#main-content">BACK TO TOP ↑</a></div></footer>
+  <script src="../language.js" defer></script>
+  <script src="hunting-firearms.js" defer></script>
+</body>
+</html>
